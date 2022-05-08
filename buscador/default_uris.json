@@ -1,0 +1,13 @@
+{
+	"legal_text_segmentation": {
+		"6000_subword_tokenizer": [
+			"https://cloud.andrelab.icmc.usp.br/s/4WF25JdeknrS5T4/download/tokenizer_6000_subwords.zip"
+		],
+		"512_hidden_dim_6000_vocab_size_1_layer_lstm": [
+			"https://cloud.andrelab.icmc.usp.br/s/GP5mW4jMJTHNe7x/download/512_hidden_dim_6000_vocab_size_1_layer_lstm.pt"
+		],
+		"2_layer_6000_vocab_size_bert": [
+			"https://cloud.andrelab.icmc.usp.br/s/PmPf2e6A38mNfDa/download/2_6000_layer_model.zip"
+		]
+	}
+}
