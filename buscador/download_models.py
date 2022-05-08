@@ -11,9 +11,13 @@ import glob
 
 import tqdm
 
+from . import integrity
+
 
 __all__ = [
     "download_model",
+    "get_available_tasks",
+    "get_task_available_models",
 ]
 
 
@@ -33,6 +37,10 @@ except (OSError, FileNotFoundError):
         ),
         category=RuntimeWarning,
     )
+
+
+class ModelHashError(Exception):
+    """Error raises when downloaded model hash does not match expected hash value."""
 
 
 @contextlib.contextmanager
@@ -120,6 +128,7 @@ def download_model_from_url(
     show_progress_bar: bool = True,
     check_cached: bool = True,
     clean_zip_files: bool = True,
+    expected_model_hash: t.Optional[str] = None,
 ) -> None:
     """Download a pretrained model from the provided `url`.
 
@@ -142,17 +151,21 @@ def download_model_from_url(
     clean_zip_files : bool, default=True
         If True, delete zip files after decompression.
 
+    expected_model_hash : str or None, default=None
+        Check whether downloaded model hash matches the provided value.
+
     Returns
     -------
     None
     """
-    output_uri_noext = ".".join(output_uri.split(".")[:-1])
+    if check_cached:
+        output_uri_noext = ".".join(output_uri.split(".")[:-1])
 
-    output_file_is_cached = any(
-        True for filename in glob.glob(f"{output_uri_noext}.*") if not filename.endswith(".zip")
-    )
-    if os.path.isdir(output_uri_noext) or output_file_is_cached:
-        return
+        output_file_is_cached = any(
+            True for filename in glob.glob(f"{output_uri_noext}.*") if not filename.endswith(".zip")
+        )
+        if os.path.isdir(output_uri_noext) or output_file_is_cached:
+            return
 
     download_file(
         url=model_url,
@@ -161,14 +174,25 @@ def download_model_from_url(
         check_cached=check_cached,
     )
 
+    hash_has_issues = expected_model_hash is not None and not integrity.check_model_hash(
+        model_uri=output_uri, model_hash=expected_model_hash
+    )
+
+    if hash_has_issues:
+        raise ModelHashError
+
     if not output_uri.endswith(".zip"):
         return
 
+    output_dir, _ = os.path.split(output_uri)
+
     with zipfile.ZipFile(output_uri) as zipf:
-        zipf.extractall()
+        zipf.extractall(path=output_dir)
 
     if clean_zip_files:
         os.remove(output_uri)
+
+    return
 
 
 def download_model(
@@ -178,6 +202,7 @@ def download_model(
     show_progress_bar: bool = True,
     check_cached: bool = True,
     clean_zip_files: bool = True,
+    check_model_hash: bool = True,
 ) -> bool:
     """Download a pretrained model from the provided (`task_name`, `model_name`) pair.
 
@@ -203,13 +228,18 @@ def download_model(
     clean_zip_files : bool, default=True
         If True, delete zip files after decompression.
 
+    check_model_hash : bool, default=True
+        If True, verify if the downloaded model hash (SHA256) matches the correct value.
+
     Returns
     -------
     was_succeed : bool
         True if file was downloaded successfully (or found locally when `check_cached=True`).
     """
+    ModelConfigType = t.List[t.Dict[str, str]]
+
     try:
-        model_map: t.Dict[str, t.Union[t.Sequence[str], str]] = DEFAULT_URIS[task_name]
+        model_map: t.Dict[str, ModelConfigType] = DEFAULT_URIS[task_name]
 
     except KeyError as k_err:
         valid_tasks = ", ".join(sorted(DEFAULT_URIS.keys()))
@@ -220,7 +250,7 @@ def download_model(
         ) from k_err
 
     try:
-        model_urls: t.Union[t.Sequence[str], str] = model_map[model_name]
+        model_configs: ModelConfigType = model_map[model_name]
 
     except KeyError as k_err:
         valid_models = ", ".join(sorted(model_map.keys()))
@@ -230,10 +260,12 @@ def download_model(
             f"task is correct and, if so, provide one of the following models: {valid_models}."
         ) from k_err
 
-    if isinstance(model_urls, str):
-        model_urls = [model_urls]
+    os.makedirs(output_dir, exist_ok=True)
 
-    for model_url in model_urls:
+    for model_config in model_configs:
+        model_url = model_config["url"]
+        model_sha256 = model_config["sha256"]
+
         _, filename = os.path.split(model_url)
         output_uri = os.path.join(output_dir, filename)
 
@@ -244,8 +276,8 @@ def download_model(
                 show_progress_bar=show_progress_bar,
                 check_cached=check_cached,
                 clean_zip_files=clean_zip_files,
+                expected_model_hash=model_sha256 if check_model_hash else None,
             )
-            return True
 
         except (ConnectionError, urllib.error.URLError) as conn_err:
             warnings.warn(
@@ -255,21 +287,31 @@ def download_model(
                 ),
                 category=RuntimeWarning,
             )
+            continue
+
+        except ModelHashError:
+            warnings.warn(
+                message=f"Unmatched model hash (SHA256) from URL '{model_url}'. Skipping it.",
+                category=RuntimeWarning,
+            )
+            continue
+
+        return True
 
     return False
 
 
-def get_avaliable_tasks() -> t.Tuple[str, ...]:
+def get_available_tasks() -> t.Tuple[str, ...]:
     """Get all available tasks to get pretrained models from."""
     return tuple(DEFAULT_URIS.keys())
 
 
-def get_task_avaliable_models(task_name: str) -> t.Tuple[str, ...]:
+def get_task_available_models(task_name: str) -> t.Tuple[str, ...]:
     """Get all available models from the provided task.
 
     See also
     --------
-    get_avaliable_tasks : get all available tasks.
+    get_available_tasks : get all available tasks.
     """
     if task_name not in DEFAULT_URIS:
         valid_tasks = ", ".join(get_available_tasks())
