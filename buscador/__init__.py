@@ -1,2 +1,2 @@
-# pylint: ignore='missing-module-docstring'
+# pylint: disable='missing-module-docstring'
 from .download_models import *

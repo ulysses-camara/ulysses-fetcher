@@ -20,7 +20,7 @@ DEFAULT_URIS: t.Dict[str, t.Any]
 DEFAULT_URIS_CONFIG_FILE = os.path.join(os.path.dirname(__file__), "default_uris.json")
 
 try:
-    with open(DEFAULT_URIS_CONFIG_FILE, "r") as f_config:
+    with open(DEFAULT_URIS_CONFIG_FILE, "r", encoding="utf-8") as f_config:
         DEFAULT_URIS = json.load(f_config)
 
 except (OSError, FileNotFoundError):
@@ -35,9 +35,10 @@ except (OSError, FileNotFoundError):
 
 
 @contextlib.contextmanager
-def _set_connection_timeout(timeout_in_seconds: int) -> None:
+def _set_connection_timeout(timeout_in_seconds: int) -> t.Iterator[None]:
+    def_timeout = socket.getdefaulttimeout()
+
     try:
-        def_timeout = socket.getdefaulttimeout()
         socket.setdefaulttimeout(timeout_in_seconds)
         yield None
 
@@ -47,7 +48,7 @@ def _set_connection_timeout(timeout_in_seconds: int) -> None:
 
 def download_file(
     url: str,
-    output_uri: t.Optional[str] = None,
+    output_uri: str,
     show_progress_bar: bool = True,
     check_cached: bool = True,
 ) -> None:
@@ -57,6 +58,7 @@ def download_file(
     pbar = None
 
     def fn_progress_bar(block_num: int, block_size: int, total_size: int) -> None:
+        # pylint: disable='unused-argument'
         nonlocal pbar
 
         if pbar is None:
@@ -179,11 +181,3 @@ def download_model(
             )
 
     return False
-
-
-def _test():
-    download_model("legal_text_segmentation", "2_layer_6000_vocab_size_bert")
-
-
-if __name__ == "__main__":
-    _test()
