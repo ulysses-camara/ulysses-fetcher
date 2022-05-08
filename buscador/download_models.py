@@ -257,3 +257,25 @@ def download_model(
             )
 
     return False
+
+
+def get_avaliable_tasks() -> t.Tuple[str, ...]:
+    """Get all available tasks to get pretrained models from."""
+    return tuple(DEFAULT_URIS.keys())
+
+
+def get_task_avaliable_models(task_name: str) -> t.Tuple[str, ...]:
+    """Get all available models from the provided task.
+
+    See also
+    --------
+    get_avaliable_tasks : get all available tasks.
+    """
+    if task_name not in DEFAULT_URIS:
+        valid_tasks = ", ".join(get_available_tasks())
+        raise ValueError(
+            f"Unrecognized task name '{task_name}'. Please provide one of the following: "
+            f"{valid_tasks}."
+        )
+
+    return tuple(DEFAULT_URIS[task_name].keys())
