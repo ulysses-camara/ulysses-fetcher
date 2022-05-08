@@ -1,3 +1,4 @@
+"""Retrieve pretrained models for the Ulysses project."""
 import typing as t
 import urllib.request
 import os
@@ -36,6 +37,7 @@ except (OSError, FileNotFoundError):
 
 @contextlib.contextmanager
 def _set_connection_timeout(timeout_in_seconds: int) -> t.Iterator[None]:
+    """Set connection timeout (in seconds) for stale downloads."""
     def_timeout = socket.getdefaulttimeout()
 
     try:
@@ -52,6 +54,26 @@ def download_file(
     show_progress_bar: bool = True,
     check_cached: bool = True,
 ) -> None:
+    """Download a file from the provided `url`.
+
+    Parameters
+    ----------
+    url : str
+        URL to donwload file from.
+
+    output_uri : str
+        Output URI (full path, ending with the filename and its extension) to save file.
+
+    show_progress_bar: bool, default=True
+        If True, show download progress bar.
+
+    check_cached : bool, default=True
+        If True, do not download file if a file with the same `output_uri` exists locally.
+
+    Returns
+    -------
+    None
+    """
     if check_cached and os.path.isfile(output_uri):
         return
 
@@ -74,7 +96,7 @@ def download_file(
         pbar.update(block_size)
 
     try:
-        with _set_connection_timeout(5):
+        with _set_connection_timeout(timeout_in_seconds=5):
             urllib.request.urlretrieve(
                 url=url,
                 filename=output_uri,
@@ -99,6 +121,31 @@ def download_model_from_url(
     check_cached: bool = True,
     clean_zip_files: bool = True,
 ) -> None:
+    """Download a pretrained model from the provided `url`.
+
+    Zipped files are decompressed.
+
+    Parameters
+    ----------
+    model_url : str
+        URL to donwload pretrained model from.
+
+    output_uri : str
+        Output URI (full path, ending with the filename and its extension) to save model.
+
+    show_progress_bar: bool, default=True
+        If True, show download progress bar.
+
+    check_cached : bool, default=True
+        If True, do not download file if a file with the same `output_uri` exists locally.
+
+    clean_zip_files : bool, default=True
+        If True, delete zip files after decompression.
+
+    Returns
+    -------
+    None
+    """
     output_uri_noext = ".".join(output_uri.split(".")[:-1])
 
     output_file_is_cached = any(
@@ -132,6 +179,35 @@ def download_model(
     check_cached: bool = True,
     clean_zip_files: bool = True,
 ) -> bool:
+    """Download a pretrained model from the provided (`task_name`, `model_name`) pair.
+
+    Both `task_name` and `model_name` must be properly configured in ``default_uris.json``.
+
+    Parameters
+    ----------
+    task_name : str
+        Model task name.
+
+    model_name : str
+        Model name to download.
+
+    output_dir : str
+        Directory to save the downloaded model.
+
+    show_progress_bar: bool, default=True
+        If True, show download progress bar.
+
+    check_cached : bool, default=True
+        If True, do not download file if a file with the same `output_uri` exists locally.
+
+    clean_zip_files : bool, default=True
+        If True, delete zip files after decompression.
+
+    Returns
+    -------
+    was_succeed : bool
+        True if file was downloaded successfully (or found locally when `check_cached=True`).
+    """
     try:
         model_map: t.Dict[str, t.Union[t.Sequence[str], str]] = DEFAULT_URIS[task_name]
 
