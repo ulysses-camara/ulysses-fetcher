@@ -1,22 +1,22 @@
 {
 	"legal_text_segmentation": {
-		"6000_subword_tokenizer": [
-			{
-				"url": "https://cloud.andrelab.icmc.usp.br/s/4WF25JdeknrS5T4/download/tokenizer_6000_subwords.zip",
-				"sha256": "dd18bc033d65f936a04bd350aefd7aecae54b3e0ab40dc8c51236983045987e4"
-			}
-		],
-		"512_hidden_dim_6000_vocab_size_1_layer_lstm": [
-			{
-				"url": "https://cloud.andrelab.icmc.usp.br/s/GP5mW4jMJTHNe7x/download/512_hidden_dim_6000_vocab_size_1_layer_lstm.pt",
-				"sha256": "46ed0259e857cde0780cac926ac34505fbea605c2ee61a0cb7e4082b584b44a1"
-			}
-		],
-		"2_layer_6000_vocab_size_bert": [
-			{
-				"url": "https://cloud.andrelab.icmc.usp.br/s/PmPf2e6A38mNfDa/download/2_6000_layer_model.zip",
-				"sha256": "d3a1acd5e1dd528574ae82bfef2939a532a001dea2f746107b7170575cfe8b46"
-			}
-		]
+		"6000_subword_tokenizer": {
+			"sha256": "8891afe49c059486cfc121326f974babe7402654713e06a0ac82429c05f43101",
+			"urls": [
+				"https://cloud.andrelab.icmc.usp.br/s/JxG9xBHNbqTmZf7/download/6000_subword_tokenizer.zip"
+			]
+		},
+		"512_hidden_dim_6000_vocab_size_1_layer_lstm": {
+			"sha256": "46ed0259e857cde0780cac926ac34505fbea605c2ee61a0cb7e4082b584b44a1",
+			"urls": [
+				"https://cloud.andrelab.icmc.usp.br/s/GP5mW4jMJTHNe7x/download/512_hidden_dim_6000_vocab_size_1_layer_lstm.pt"
+			]
+		},
+		"2_layer_6000_vocab_size_bert": {
+			"sha256": "d3a1acd5e1dd528574ae82bfef2939a532a001dea2f746107b7170575cfe8b46",
+			"urls": [
+				"https://cloud.andrelab.icmc.usp.br/s/PmPf2e6A38mNfDa/download/2_6000_layer_model.zip"
+			]
+		}
 	}
 }

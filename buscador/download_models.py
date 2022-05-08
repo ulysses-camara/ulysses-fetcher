@@ -236,7 +236,7 @@ def download_model(
     was_succeed : bool
         True if file was downloaded successfully (or found locally when `check_cached=True`).
     """
-    ModelConfigType = t.List[t.Dict[str, str]]
+    ModelConfigType = t.Dict[str, t.Any]
 
     try:
         model_map: t.Dict[str, ModelConfigType] = DEFAULT_URIS[task_name]
@@ -250,7 +250,7 @@ def download_model(
         ) from k_err
 
     try:
-        model_configs: ModelConfigType = model_map[model_name]
+        model_config: ModelConfigType = model_map[model_name]
 
     except KeyError as k_err:
         valid_models = ", ".join(sorted(model_map.keys()))
@@ -262,10 +262,9 @@ def download_model(
 
     os.makedirs(output_dir, exist_ok=True)
 
-    for model_config in model_configs:
-        model_url = model_config["url"]
-        model_sha256 = model_config["sha256"]
+    model_sha256 = model_config["sha256"]
 
+    for model_url in model_config["urls"]:
         _, filename = os.path.split(model_url)
         output_uri = os.path.join(output_dir, filename)
 
