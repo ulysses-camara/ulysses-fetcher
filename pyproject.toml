@@ -79,12 +79,13 @@ line-length=100
 [tool.tox]
 legacy_tox_ini = """
 [tox]
-envlist = py37, py39, py310, mypy, pylint
+envlist = py37, py310, mypy, pylint
 isolated_build = true
 
 [gh-actions]
 python =
-    3.9: mypy, pylint
+    3.7: py37, mypy, pylint
+    3.10: py310
 
 [testenv]
 whitelist_externals = flit
@@ -95,14 +96,14 @@ commands =
 	python -m pytest
 
 [testenv:mypy]
-basepython = python3.9
+basepython = python3.7
 deps = mypy
 commands =
 	python -m mypy --install-types --non-interactive src/
 	python -m mypy src/
 
 [testenv:pylint]
-basepython = python3.9
+basepython = python3.7
 deps =
 	pylint
 	pytest
