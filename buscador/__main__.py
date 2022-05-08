@@ -66,7 +66,7 @@ def main() -> None:
     """Fetch a pretrained model."""
     args = parse_args()
 
-    download_models.download_model(
+    has_succeed = download_models.download_model(
         task_name=args.task_name,
         model_name=args.model_name,
         output_dir=args.output_dir,
@@ -76,7 +76,11 @@ def main() -> None:
         check_model_hash=not args.ignore_model_hash,
     )
 
-    print(f"Model downloaded sucessfully in '{args.output_dir}'.")
+    if has_succeed:
+        print(f"Model downloaded sucessfully in '{args.output_dir}'.")
+
+    else:
+        print("Could not download file.")
 
 
 if __name__ == "__main__":
