@@ -112,11 +112,15 @@ def download_file(
             )
 
     except Exception as err:
-        os.remove(output_uri)
+        if os.path.isfile(output_uri):
+            os.remove(output_uri)
+
         raise ConnectionError(f"Could not download pretrained model from '{output_uri}'.") from err
 
     except KeyboardInterrupt as kbi_err:
-        os.remove(output_uri)
+        if os.path.isfile(output_uri):
+            os.remove(output_uri)
+
         raise KeyboardInterrupt from kbi_err
 
     return
@@ -296,6 +300,12 @@ def download_model(
             continue
 
         return True
+
+    try:
+        os.rmdir(output_dir)
+
+    except OSError:
+        pass
 
     return False
 
