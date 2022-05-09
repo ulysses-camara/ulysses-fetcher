@@ -13,9 +13,9 @@
 			]
 		},
 		"2_layer_6000_vocab_size_bert": {
-			"sha256": "d3a1acd5e1dd528574ae82bfef2939a532a001dea2f746107b7170575cfe8b46",
+			"sha256": "eaea8fcd5025eabaf5faf2bb138b7685eb4ac1b015f0fc55c0800b423e30a849",
 			"urls": [
-				"https://cloud.andrelab.icmc.usp.br/s/PmPf2e6A38mNfDa/download/2_6000_layer_model.zip"
+				"https://cloud.andrelab.icmc.usp.br/s/SeRPHBJJxNHAbP3/download/2_layer_6000_vocab_size_bert.zip"
 			]
 		}
 	}
