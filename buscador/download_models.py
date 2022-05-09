@@ -8,6 +8,7 @@ import warnings
 import socket
 import contextlib
 import glob
+import shutil
 
 import tqdm
 
@@ -96,7 +97,7 @@ def download_file(
         nonlocal pbar
 
         if pbar is None:
-            _, filename = os.path.split(url)
+            _, filename = os.path.split(output_uri)
             pbar = tqdm.tqdm(
                 total=total_size,
                 unit_scale=True,
@@ -192,6 +193,12 @@ def download_model_from_url(
     )
 
     if hash_has_issues:
+        if os.path.isfile(output_uri):
+            os.remove(output_uri)
+
+        if os.path.isdir(output_uri):
+            shutil.rmtree(output_uri)
+
         raise ModelHashError
 
     if not output_uri.endswith(".zip"):
@@ -280,10 +287,10 @@ def download_model(
     os.makedirs(output_dir, exist_ok=True)
 
     model_sha256 = model_config["sha256"]
+    f_extension = model_config["file_extension"]
 
     for model_url in model_config["urls"]:
-        _, filename = os.path.split(model_url)
-        output_uri = os.path.join(output_dir, filename)
+        output_uri = os.path.join(output_dir, f"{model_name}{f_extension}")
 
         try:
             download_model_from_url(
