@@ -93,22 +93,22 @@ whitelist_externals = flit
 commands =
 	pip install .
 	pip install '.[test]'
-	python -m pytest src/ --doctest-modules --doctest-glob='**/*.py'
 	python -m pytest
 
 [testenv:mypy]
 basepython = python3.7
 deps = mypy
 commands =
-	python -m mypy --install-types --non-interactive src/
-	python -m mypy src/
+	python -m mypy --install-types --non-interactive buscador/
+	python -m mypy buscador/
 
 [testenv:pylint]
 basepython = python3.7
 deps =
 	pylint
 	pytest
+	pytest_socket
 commands =
 	python -m pylint --disable='missing-function-docstring' tests/
-	python -m pylint src/
+	python -m pylint buscador/
 """
