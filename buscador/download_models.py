@@ -61,6 +61,7 @@ def download_file(
     output_uri: str,
     show_progress_bar: bool = True,
     check_cached: bool = True,
+    timeout_limit_seconds: int = 10,
 ) -> None:
     """Download a file from the provided `url`.
 
@@ -77,6 +78,9 @@ def download_file(
 
     check_cached : bool, default=True
         If True, do not download file if a file with the same `output_uri` exists locally.
+
+    timeout_limit_seconds : int, default=10
+        Timeout limit for stale downloads, in seconds.
 
     Returns
     -------
@@ -104,7 +108,7 @@ def download_file(
         pbar.update(block_size)
 
     try:
-        with _set_connection_timeout(timeout_in_seconds=5):
+        with _set_connection_timeout(timeout_in_seconds=timeout_limit_seconds):
             urllib.request.urlretrieve(
                 url=url,
                 filename=output_uri,
@@ -133,6 +137,7 @@ def download_model_from_url(
     check_cached: bool = True,
     clean_zip_files: bool = True,
     expected_model_hash: t.Optional[str] = None,
+    timeout_limit_seconds: int = 10,
 ) -> None:
     """Download a pretrained model from the provided `url`.
 
@@ -158,6 +163,9 @@ def download_model_from_url(
     expected_model_hash : str or None, default=None
         Check whether downloaded model hash matches the provided value.
 
+    timeout_limit_seconds : int, default=10
+        Timeout limit for stale downloads, in seconds.
+
     Returns
     -------
     None
@@ -176,6 +184,7 @@ def download_model_from_url(
         output_uri=output_uri,
         show_progress_bar=show_progress_bar,
         check_cached=check_cached,
+        timeout_limit_seconds=timeout_limit_seconds,
     )
 
     hash_has_issues = expected_model_hash is not None and not integrity.check_model_hash(
@@ -207,6 +216,7 @@ def download_model(
     check_cached: bool = True,
     clean_zip_files: bool = True,
     check_model_hash: bool = True,
+    timeout_limit_seconds: int = 10,
 ) -> bool:
     """Download a pretrained model from the provided (`task_name`, `model_name`) pair.
 
@@ -234,6 +244,9 @@ def download_model(
 
     check_model_hash : bool, default=True
         If True, verify if the downloaded model hash (SHA256) matches the correct value.
+
+    timeout_limit_seconds : int, default=10
+        Timeout limit for stale downloads, in seconds.
 
     Returns
     -------
@@ -280,6 +293,7 @@ def download_model(
                 check_cached=check_cached,
                 clean_zip_files=clean_zip_files,
                 expected_model_hash=model_sha256 if check_model_hash else None,
+                timeout_limit_seconds=timeout_limit_seconds,
             )
 
         except (ConnectionError, urllib.error.URLError) as conn_err:

@@ -40,6 +40,14 @@ def parse_args() -> argparse.Namespace:
     )
 
     parser.add_argument(
+        "--timeout-limit",
+        "-t",
+        default=10,
+        type=int,
+        help="Timeout limit for stale downloads, in seconds.",
+    )
+
+    parser.add_argument(
         "--disable-progress-bar",
         action="store_true",
     )
@@ -74,6 +82,7 @@ def main() -> None:
         check_cached=not args.ignore_cached_files,
         clean_zip_files=not args.keep_zip_files,
         check_model_hash=not args.ignore_model_hash,
+        timeout_limit_seconds=args.timeout_limit,
     )
 
     if has_succeed:
