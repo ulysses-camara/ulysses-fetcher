@@ -1,9 +1,10 @@
+"""Check if models can be downloaded corrctly."""
 import os
 import shutil
 import glob
+import time
 
 import pytest
-import time
 
 import buscador
 

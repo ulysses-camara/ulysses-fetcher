@@ -1,3 +1,4 @@
+"""Check if invalid arguments raises proper warnings or exceptions."""
 import os
 
 import pytest
