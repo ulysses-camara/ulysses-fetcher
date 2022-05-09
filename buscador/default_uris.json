@@ -2,19 +2,25 @@
 	"legal_text_segmentation": {
 		"6000_subword_tokenizer": {
 			"sha256": "8891afe49c059486cfc121326f974babe7402654713e06a0ac82429c05f43101",
+			"file_extension": ".zip",
 			"urls": [
+				"https://drive.google.com/uc?id=1PhPnJnXx7o9XkurZpBmIlf9cCDldhpZC&export=download&confirm=t",
 				"https://cloud.andrelab.icmc.usp.br/s/JxG9xBHNbqTmZf7/download/6000_subword_tokenizer.zip"
 			]
 		},
 		"512_hidden_dim_6000_vocab_size_1_layer_lstm": {
 			"sha256": "46ed0259e857cde0780cac926ac34505fbea605c2ee61a0cb7e4082b584b44a1",
+			"file_extension": ".pt",
 			"urls": [
+				"https://drive.google.com/uc?id=1NnPRsX98qMLdaoRxhksxr7TkbTVTRjF_&export=download&confirm=t",
 				"https://cloud.andrelab.icmc.usp.br/s/GP5mW4jMJTHNe7x/download/512_hidden_dim_6000_vocab_size_1_layer_lstm.pt"
 			]
 		},
 		"2_layer_6000_vocab_size_bert": {
 			"sha256": "eaea8fcd5025eabaf5faf2bb138b7685eb4ac1b015f0fc55c0800b423e30a849",
+			"file_extension": ".zip",
 			"urls": [
+				"https://drive.google.com/uc?id=14hztGOTk_O7FBuBLRoPmWJnLnMphxEOa&export=download&confirm=t",
 				"https://cloud.andrelab.icmc.usp.br/s/SeRPHBJJxNHAbP3/download/2_layer_6000_vocab_size_bert.zip"
 			]
 		}
