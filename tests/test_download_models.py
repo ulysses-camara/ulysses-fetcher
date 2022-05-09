@@ -24,7 +24,7 @@ def test_download_segmenter_models(model_name: str):
         task_name="legal_text_segmentation",
         model_name=model_name,
         output_dir=output_dir,
-        show_progress_bar=True,
+        show_progress_bar=False,
         check_cached=False,
         clean_zip_files=True,
         check_model_hash=True,
@@ -40,7 +40,7 @@ def test_download_segmenter_models(model_name: str):
         task_name="legal_text_segmentation",
         model_name=model_name,
         output_dir=output_dir,
-        show_progress_bar=True,
+        show_progress_bar=False,
         check_cached=True,
         clean_zip_files=True,
         check_model_hash=True,
@@ -48,8 +48,9 @@ def test_download_segmenter_models(model_name: str):
 
     t_delta = time.perf_counter() - t_start
 
-    assert t_delta <= 1.0
-    assert has_succeed and (os.path.exists(output_uri) or os.path.exists(f"{output_uri}.pt"))
+    assert t_delta <= 1.0, t_delta
+    assert has_succeed
+    assert os.path.exists(output_uri) or os.path.exists(f"{output_uri}.pt"), output_uri
 
     if os.path.isdir(output_uri):
         shutil.rmtree(output_dir)
@@ -69,7 +70,7 @@ def test_keep_zip_file():
         task_name="legal_text_segmentation",
         model_name=model_name,
         output_dir=output_dir,
-        show_progress_bar=True,
+        show_progress_bar=False,
         check_cached=False,
         clean_zip_files=False,
         check_model_hash=True,
@@ -77,7 +78,8 @@ def test_keep_zip_file():
 
     output_uri = os.path.join(output_dir, model_name)
 
-    assert has_succeed and os.path.exists(output_uri)
+    assert has_succeed
+    assert os.path.exists(output_uri), output_uri
     assert os.path.isfile(os.path.join(output_dir, f"{model_name}.zip"))
 
     t_start = time.perf_counter()
@@ -86,7 +88,7 @@ def test_keep_zip_file():
         task_name="legal_text_segmentation",
         model_name=model_name,
         output_dir=output_dir,
-        show_progress_bar=True,
+        show_progress_bar=False,
         check_cached=True,
         clean_zip_files=False,
         check_model_hash=True,
@@ -94,8 +96,9 @@ def test_keep_zip_file():
 
     t_delta = time.perf_counter() - t_start
 
-    assert t_delta <= 1.0
-    assert has_succeed and os.path.exists(output_uri)
+    assert t_delta <= 1.0, t_delta
+    assert has_succeed
+    assert os.path.exists(output_uri), output_uri
 
     shutil.rmtree(output_dir)
 
