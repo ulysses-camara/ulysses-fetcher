@@ -33,7 +33,7 @@ has_succeed = buscador.download_model(
     timeout_limit_seconds=10,
 )
 
-print("Download was sucessfull!" if has_succeed "Download was not sucessfull.")
+print("Download was successfull!" if has_succeed "Download was not successfull.")
 ```
 
 - **task_name** (*str*): Model task name. You can get a list of curretnyl supported tasks programatically by using `buscador.get_available_tasks()`. The list of supported tasks are:
