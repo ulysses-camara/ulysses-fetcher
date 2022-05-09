@@ -7,7 +7,7 @@ def check_model_hash(
     model_uri: str,
     model_hash: str,
     read_block_size: int = 65536,
-    hash_fn: t.Callable[[], hashlib._hashlib.HASH] = hashlib.sha256,
+    hash_fn: t.Callable[[], t.Any] = hashlib.sha256,
 ) -> bool:
     """Check whether a downloaded file has the expected hash value."""
     hasher = hash_fn()
