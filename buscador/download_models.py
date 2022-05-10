@@ -136,7 +136,7 @@ def download_model_from_url(
     output_uri: str,
     show_progress_bar: bool = True,
     check_cached: bool = True,
-    clean_zip_files: bool = True,
+    clean_compressed_files: bool = True,
     expected_model_hash: t.Optional[str] = None,
     timeout_limit_seconds: int = 10,
 ) -> None:
@@ -158,8 +158,8 @@ def download_model_from_url(
     check_cached : bool, default=True
         If True, do not download file if a file with the same `output_uri` exists locally.
 
-    clean_zip_files : bool, default=True
-        If True, delete zip files after decompression.
+    clean_compressed_files : bool, default=True
+        If True, delete compressed files after decompression.
 
     expected_model_hash : str or None, default=None
         Check whether downloaded model hash matches the provided value.
@@ -201,7 +201,7 @@ def download_model_from_url(
 
         raise ModelHashError
 
-    decompress.decompress(output_uri, clean_zip_files=clean_zip_files)
+    decompress.decompress(output_uri, clean_compressed_files=clean_compressed_files)
 
 
 def download_model(
@@ -210,7 +210,7 @@ def download_model(
     output_dir: str = ".",
     show_progress_bar: bool = True,
     check_cached: bool = True,
-    clean_zip_files: bool = True,
+    clean_compressed_files: bool = True,
     check_model_hash: bool = True,
     timeout_limit_seconds: int = 10,
 ) -> bool:
@@ -235,8 +235,8 @@ def download_model(
     check_cached : bool, default=True
         If True, do not download file if a file with the same `output_uri` exists locally.
 
-    clean_zip_files : bool, default=True
-        If True, delete zip files after decompression.
+    clean_compressed_files : bool, default=True
+        If True, delete compressed files after decompression.
 
     check_model_hash : bool, default=True
         If True, verify if the downloaded model hash (SHA256) matches the correct value.
@@ -288,7 +288,7 @@ def download_model(
                 output_uri=output_uri,
                 show_progress_bar=show_progress_bar,
                 check_cached=check_cached,
-                clean_zip_files=clean_zip_files,
+                clean_compressed_files=clean_compressed_files,
                 expected_model_hash=model_sha256 if check_model_hash else None,
                 timeout_limit_seconds=timeout_limit_seconds,
             )

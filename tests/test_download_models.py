@@ -26,7 +26,7 @@ def test_download_segmenter_models(model_name: str):
         output_dir=output_dir,
         show_progress_bar=False,
         check_cached=False,
-        clean_zip_files=True,
+        clean_compressed_files=True,
         check_model_hash=True,
     )
 
@@ -42,7 +42,7 @@ def test_download_segmenter_models(model_name: str):
         output_dir=output_dir,
         show_progress_bar=False,
         check_cached=True,
-        clean_zip_files=True,
+        clean_compressed_files=True,
         check_model_hash=True,
     )
 
@@ -62,7 +62,7 @@ def test_download_segmenter_models(model_name: str):
         os.rmdir(output_dir)
 
 
-def test_keep_zip_file():
+def test_keep_compressed_file():
     model_name = "6000_subword_tokenizer"
     output_dir = os.path.join(os.path.dirname(__file__), "downloaded_models_from_tests")
 
@@ -72,7 +72,7 @@ def test_keep_zip_file():
         output_dir=output_dir,
         show_progress_bar=False,
         check_cached=False,
-        clean_zip_files=False,
+        clean_compressed_files=False,
         check_model_hash=True,
     )
 
@@ -90,7 +90,7 @@ def test_keep_zip_file():
         output_dir=output_dir,
         show_progress_bar=False,
         check_cached=True,
-        clean_zip_files=False,
+        clean_compressed_files=False,
         check_model_hash=True,
     )
 

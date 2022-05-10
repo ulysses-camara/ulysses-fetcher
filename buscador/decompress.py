@@ -15,7 +15,7 @@ COMPRESSION_ALG: t.Dict[str, t.Type[t.Any]] = {
 RE_GET_EXT = re.compile(r"\.(.*)$")
 
 
-def decompress(output_uri: str, clean_zip_files: bool = False) -> None:
+def decompress(output_uri: str, clean_compressed_files: bool = False) -> None:
     """Decompress a compressed file."""
     match_file_ext = RE_GET_EXT.search(output_uri)
 
@@ -33,5 +33,5 @@ def decompress(output_uri: str, clean_zip_files: bool = False) -> None:
     with fn_compressed_file(output_uri) as f_compressed:
         f_compressed.extractall(path=output_dir)
 
-    if clean_zip_files:
+    if clean_compressed_files:
         os.remove(output_uri)

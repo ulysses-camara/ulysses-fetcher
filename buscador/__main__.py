@@ -50,21 +50,25 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--disable-progress-bar",
         action="store_true",
+        help="if enabled, do not show download progress bar.",
     )
 
     parser.add_argument(
         "--ignore-cached-files",
         action="store_true",
+        help="If enabled, download requested file even if it exists locally.",
     )
 
     parser.add_argument(
-        "--keep-zip-files",
+        "--keep-compressed-files",
         action="store_true",
+        help="If enabled, keep any compressed files even before decompression.",
     )
 
     parser.add_argument(
         "--ignore-model-hash",
         action="store_true",
+        help="If enabled, do not verify if downloaded file hash matches the expected value.",
     )
 
     return parser.parse_args()
@@ -80,7 +84,7 @@ def main() -> None:
         output_dir=args.output_dir,
         show_progress_bar=not args.disable_progress_bar,
         check_cached=not args.ignore_cached_files,
-        clean_zip_files=not args.keep_zip_files,
+        clean_compressed_files=not args.keep_compressed_files,
         check_model_hash=not args.ignore_model_hash,
         timeout_limit_seconds=args.timeout_limit,
     )
