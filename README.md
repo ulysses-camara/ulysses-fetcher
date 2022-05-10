@@ -5,13 +5,14 @@ Fetch pretrained models for Ulysses project.
 
 ---
 
-## Table of contents
+## Table of Contents
 1. [Installation](#installation)
-2. [Usage as package](#usage-as-package)
-3. [Usage by command line](#usage-by-command-line)
-4. [For developers](#for-developers)
+2. [Available models](#available-models)
+3. [Usage as package](#usage-as-package)
+4. [Usage by command line](#usage-by-command-line)
+5. [For developers](#for-developers)
     1. [Register a new pretrained model](#register-a-new-pretrained-model)
-5. [License](#license)
+6. [License](#license)
 
 ---
 
@@ -19,6 +20,13 @@ Fetch pretrained models for Ulysses project.
 ```bash
 python -m pip install "git+https://github.com/ulysses-camara/ulysses-fetcher"
 ```
+---
+
+## Available models
+| Task name | Model name |
+| --------- | ---------- |
+| `legal_text_segmentation` | - `2_layer_6000_vocab_size_bert`<br> - `512_hidden_dim_6000_vocab_size_1_layer_lstm`<br> - `6000_subword_tokenizer`|
+
 ---
 
 ## Usage as package
