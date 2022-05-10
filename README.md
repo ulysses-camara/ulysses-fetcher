@@ -26,6 +26,7 @@ python -m pip install "git+https://github.com/ulysses-camara/ulysses-fetcher"
 | Task name | Model name |
 | --------- | ---------- |
 | `legal_text_segmentation` | - `2_layer_6000_vocab_size_bert`<br> - `512_hidden_dim_6000_vocab_size_1_layer_lstm`<br> - `6000_subword_tokenizer`|
+| `sentence_similarity`     | - `distil_sbert_br_ctimproved_12_epochs_v1` |
 
 ---
 
