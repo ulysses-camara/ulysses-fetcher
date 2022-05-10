@@ -1,3 +1,5 @@
+[![Tests](https://github.com/ulysses-camara/ulysses-fetcher/actions/workflows/tests.yml/badge.svg)](https://github.com/ulysses-camara/ulysses-fetcher/actions/workflows/tests.yml)
+
 # Ulysses Fetcher
 Fetch pretrained models for Ulysses project.
 
