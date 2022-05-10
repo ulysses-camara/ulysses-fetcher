@@ -85,9 +85,10 @@ python -m buscador --help
 
 ### Register a new pretrained model
 To register a new pretrained model in Ulysses Fetcher, please follow the steps below:
-1. Compress your pretrained model as either `.zip` or `.tar` format (if it is a PyTorch binary, `.pt`, you can skip this step).
-2. Store your pretrained model in a couple of cloud storage services, and get their directly download URL. It is recommended to store your model in at least two distinct cloud providers.
-3. Hash you pretrained model by using SHA256 from Python hashlib, as follows:
+1. Make sure that the pretrained model filename (or directory name, in case your model is represented by more than one file) matches **exactly** the desired model name.
+2. Compress your pretrained model as either `.zip` or `.tar` format (if it is a PyTorch binary, `.pt`, you can skip this step).
+3. Store your pretrained model in a couple of cloud storage services, and get their directly download URL. It is recommended to store your model in at least two distinct cloud providers.
+4. Hash you pretrained model by using SHA256 from Python hashlib, as follows:
 ```python
 import hashlib
 
@@ -101,7 +102,7 @@ with open("path_to_my_compressed_pretrained_model", "rb") as f_in:
 my_model_sha256 = hasher.hexdigest()
 print(my_model_sha256)
 ```
-4. Edit the [default_uris.json](./buscador/default_uris.json) file, providing the model task, model name, file extension (`.zip` or `.tar` for compressed models), its computed SHA256, and the direct download URLs as depicted in the exemple below. Note that Ulysses Fetcher will try to download models by following the provided order in `urls`. Hence, later URLs are fallback addresses in case something went wrong with every previous URL.
+5. Edit the [default_uris.json](./buscador/default_uris.json) file, providing the model task, model name, file extension (`.zip` or `.tar` for compressed models), its computed SHA256, and the direct download URLs as depicted in the exemple below. Note that Ulysses Fetcher will try to download models by following the provided order in `urls`. Hence, later URLs are fallback addresses in case something went wrong with every previous URL.
 ```json
 {
   "model_task": {
@@ -110,12 +111,12 @@ print(my_model_sha256)
     "urls": [
       "https://url_1",
       "https://url_2",
-      ...
+      "..."
     ]
   }
 }
 ```
-5. Create a Pull Request with your changes, providing all information about your model. Your contribution will be reviewed and, if appropriate to this package, it may get accepted.
+6. Create a Pull Request with your changes, providing all information about your model. Your contribution will be reviewed and, if appropriate to this package, it may get accepted.
 
 ---
 
