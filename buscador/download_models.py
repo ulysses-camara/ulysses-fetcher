@@ -3,7 +3,6 @@ import typing as t
 import urllib.request
 import os
 import json
-import zipfile
 import warnings
 import socket
 import contextlib
@@ -13,6 +12,7 @@ import shutil
 import tqdm
 
 from . import integrity
+from . import decompress
 
 
 __all__ = [
@@ -201,18 +201,7 @@ def download_model_from_url(
 
         raise ModelHashError
 
-    if not output_uri.endswith(".zip"):
-        return
-
-    output_dir, _ = os.path.split(output_uri)
-
-    with zipfile.ZipFile(output_uri) as zipf:
-        zipf.extractall(path=output_dir)
-
-    if clean_zip_files:
-        os.remove(output_uri)
-
-    return
+    decompress.decompress(output_uri, clean_zip_files=clean_zip_files)
 
 
 def download_model(
@@ -290,7 +279,8 @@ def download_model(
     f_extension = model_config["file_extension"]
 
     for model_url in model_config["urls"]:
-        output_uri = os.path.join(output_dir, f"{model_name}{f_extension}")
+        output_uri = os.path.join(output_dir, f"{model_name}{f_extension}").strip()
+        model_url = model_url.strip()
 
         try:
             download_model_from_url(
