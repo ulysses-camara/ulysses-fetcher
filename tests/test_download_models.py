@@ -10,18 +10,19 @@ import buscador
 
 
 @pytest.mark.parametrize(
-    "model_name",
+    "model_name,task_name",
     [
-        "2_layer_6000_vocab_size_bert",
-        "512_hidden_dim_6000_vocab_size_1_layer_lstm",
-        "6000_subword_tokenizer",
+        ("2_layer_6000_vocab_size_bert", "legal_text_segmentation"),
+        ("512_hidden_dim_6000_vocab_size_1_layer_lstm", "legal_text_segmentation"),
+        ("6000_subword_tokenizer", "legal_text_segmentation"),
+        ("distil_sbert_br_ctimproved_12_epochs_v1", "sentence_similarity"),
     ],
 )
-def test_download_segmenter_models(model_name: str):
+def test_download_segmenter_models(model_name: str, task_name: str):
     output_dir = os.path.join(os.path.dirname(__file__), "downloaded_models_from_tests")
 
     has_succeed = buscador.download_model(
-        task_name="legal_text_segmentation",
+        task_name=task_name,
         model_name=model_name,
         output_dir=output_dir,
         show_progress_bar=False,
@@ -37,7 +38,7 @@ def test_download_segmenter_models(model_name: str):
     t_start = time.perf_counter()
 
     has_succeed = buscador.download_model(
-        task_name="legal_text_segmentation",
+        task_name=task_name,
         model_name=model_name,
         output_dir=output_dir,
         show_progress_bar=False,
@@ -107,5 +108,6 @@ def test_get_available_tasks():
     assert buscador.get_available_tasks()
 
 
-def test_get_available_models_for_segmentation_task():
-    assert buscador.get_task_available_models(task_name="legal_text_segmentation")
+@pytest.mark.parametrize("task_name", ["legal_text_segmentation", "sentence_similarity"])
+def test_get_available_models_for_segmentation_task(task_name: str):
+    assert buscador.get_task_available_models(task_name=task_name)
