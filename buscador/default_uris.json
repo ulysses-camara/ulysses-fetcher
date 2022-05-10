@@ -24,5 +24,15 @@
 				"https://cloud.andrelab.icmc.usp.br/s/SeRPHBJJxNHAbP3/download/2_layer_6000_vocab_size_bert.zip"
 			]
 		}
+	},
+	"sentence_similarity": {
+		"distil_sbert_br_ctimproved_12_epochs_v1" : {
+			"sha256": "69df49d4c78da0161186e5761a762ef9632561ebf33aa41422c5d2db07d04ae5",
+			"file_extension": ".zip",
+			"urls": [
+				"https://drive.google.com/uc?id=1UzbQMOvHNZxkvwN5sT2gizca2DY5Uow7&export=download&confirm=t",
+				"https://cloud.andrelab.icmc.usp.br/s/ZEDegCCM98SkTto/download/distil_sbert_br_ctimproved_12_epochs_v1.zip"
+			]
+		}
 	}
 }
