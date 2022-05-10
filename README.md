@@ -38,13 +38,13 @@ has_succeed = buscador.download_model(
 print("Download was successfull!" if has_succeed else "Download was not successfull.")
 ```
 
-- **task_name** (*str*): Model task name. You can get a list of curretnyl supported tasks programatically by using `buscador.get_available_tasks()`. The list of supported tasks are:
+- **task_name** (*str*): Model task name. You can get a list of currently supported tasks programatically by using `buscador.get_available_tasks()`. The list of supported tasks are:
   - **legal_text_segmentation**: Segmentation of Brazilian Legal texts.
 - **model_name** (*str*): Model to download. You can get a list of available models per task by using `buscador.get_task_available_models(task_name)`.
 - **output_dir** (*str*): Output directory to save downloaded models.
 - **show_progress_bar** (*bool, default=True*): If True, display progress bar.
 - **check_cached** (*bool, default=True*): If True, do not download models if a file with the same output URI is found.
-- **clean_compressed_files** (*bool, default=True*): If True, remove `.zip` files after decompression.
+- **clean_compressed_files** (*bool, default=True*): If True, remove compressed files after decompression.
 - **check_model_hash** (*bool, default=True*): If True, verify if downloaded file hash matches the expected hash value.
 - **timeout_limit_seconds** (*int, default=10*): Number of seconds until abortion of staled downloads.
 
@@ -56,7 +56,7 @@ This package can be used directly from command line as module after installation
 python -m buscador --help
 ```
 - Positional arguments:
-  - `task_name`: Task name to retrieve a pretrained model from. Must be one of the following: legal_text_segmentation.
+  - `task_name`: Task name to retrieve a pretrained model from.
   - `model_name`: Pretrained model name to retrieve.
 
 - Optional arguments:
