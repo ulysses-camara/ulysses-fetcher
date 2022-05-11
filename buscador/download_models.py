@@ -175,7 +175,8 @@ def download_model_from_url(
         output_uri_noext = ".".join(output_uri.split(".")[:-1])
 
         output_file_is_cached = any(
-            True for filename in glob.glob(f"{output_uri_noext}*") if not filename.endswith(".zip")
+            not (filename.endswith(".zip") or filename.endswith(".tar"))
+            for filename in glob.glob(f"{output_uri_noext}*")
         )
         if os.path.isdir(output_uri_noext) or output_file_is_cached:
             return
