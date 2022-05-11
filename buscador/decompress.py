@@ -17,6 +17,7 @@ RE_GET_EXT = re.compile(r"\.(.*)$")
 
 def decompress(output_uri: str, clean_compressed_files: bool = False) -> None:
     """Decompress a compressed file."""
+    output_uri = os.path.realpath(os.path.expanduser(output_uri))
     match_file_ext = RE_GET_EXT.search(output_uri)
 
     if not match_file_ext:

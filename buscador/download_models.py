@@ -274,6 +274,7 @@ def download_model(
             f"task is correct and, if so, provide one of the following models: {valid_models}."
         ) from k_err
 
+    output_dir = os.path.realpath(os.path.expanduser(output_dir))
     os.makedirs(output_dir, exist_ok=True)
 
     model_sha256 = model_config["sha256"]
