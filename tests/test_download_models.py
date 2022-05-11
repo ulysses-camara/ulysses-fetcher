@@ -33,7 +33,8 @@ def test_download_segmenter_models(model_name: str, task_name: str):
 
     output_uri = os.path.join(output_dir, model_name)
 
-    assert has_succeed and (os.path.exists(output_uri) or os.path.exists(f"{output_uri}.pt"))
+    assert has_succeed
+    assert os.path.exists(output_uri) or os.path.exists(f"{output_uri}.pt")
 
     t_start = time.perf_counter()
 
