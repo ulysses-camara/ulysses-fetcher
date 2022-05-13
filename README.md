@@ -51,6 +51,7 @@ print("Download was successfull!" if has_succeed else "Download was not successf
 
 - **task_name** (*str*): Model task name. You can get a list of currently supported tasks programatically by using `buscador.get_available_tasks()`. The list of supported tasks are:
   - **legal_text_segmentation**: Segmentation of Brazilian Legal texts.
+  - **sentence_similarity**: Sentence models for legal domain, trained for similarity tasks.
 - **model_name** (*str*): Model to download. You can get a list of available models per task by using `buscador.get_task_available_models(task_name)`.
 - **output_dir** (*str*): Output directory to save downloaded models.
 - **show_progress_bar** (*bool, default=True*): If True, display progress bar.
@@ -76,7 +77,7 @@ python -m buscador --help
   - `--timeout-limit TIMEOUT_LIMIT`: Timeout limit for stale downloads, in seconds.
   - `--disable-progress-bar`: If enabled, do not display progress bar.
   - `--ignore-cached-files`: If enabled, download files even they are found locally.
-  - `--keep-compressed-files`: If enabled, do not exclude `.zip` files after decompression.
+  - `--keep-compressed-files`: If enabled, do not exclude compressed files (`.zip`, `.tar`) after decompression.
   - `--ignore-model-hash`: If enabled, do not verify if downloaded file hash matches the expected value.
 
 ---
