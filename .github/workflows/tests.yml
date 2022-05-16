@@ -10,6 +10,7 @@ on:
       - '.gitignore'
       - 'LICENSE'
       - '.gitattributes'
+      - 'py.typed'
 
   pull_request:
     paths-ignore:
@@ -17,6 +18,7 @@ on:
       - '.gitignore'
       - 'LICENSE'
       - '.gitattributes'
+      - 'py.typed'
 
 jobs:
   test:
