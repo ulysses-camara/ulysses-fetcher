@@ -1,42 +1,40 @@
-"""Fetch pretrained Ulysses models from command line."""
+"""Fetch pretrained Ulysses resources from command line."""
 import argparse
 
-from . import download_models
+from . import download_resources
 
 
 def parse_args() -> argparse.Namespace:
     """Parse user arguments."""
     parser = argparse.ArgumentParser(
         prog="python -m buscador",
-        description=(
-            "Download pretrained models for Ulysses project (from Brazil's Chamber of Deputies)."
-        ),
+        description=("Download resources for Ulysses project (from Brazil's Chamber of Deputies)."),
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
 
-    valid_tasks = download_models.get_available_tasks()
+    valid_tasks = download_resources.get_available_tasks()
 
     parser.add_argument(
         "task_name",
         type=str,
         help=(
-            "Task name to retrieve a pretrained model from. "
+            "Task name to retrieve a resource from. "
             f"Must be one of the following: {', '.join(valid_tasks)}."
         ),
     )
 
     parser.add_argument(
-        "model_name",
+        "resource_name",
         type=str,
-        help="Pretrained model name to retrieve.",
+        help="Pretrained resource name to retrieve.",
     )
 
     parser.add_argument(
         "--output-dir",
         "-d",
-        default="ulysses_pretrained_models",
+        default="ulysses_resources",
         type=str,
-        help="Output directory to store downloaded models.",
+        help="Output directory to store downloaded resources.",
     )
 
     parser.add_argument(
@@ -66,7 +64,7 @@ def parse_args() -> argparse.Namespace:
     )
 
     parser.add_argument(
-        "--ignore-model-hash",
+        "--ignore-resource-hash",
         action="store_true",
         help="If enabled, do not verify if downloaded file hash matches the expected value.",
     )
@@ -75,22 +73,22 @@ def parse_args() -> argparse.Namespace:
 
 
 def main() -> None:
-    """Fetch a pretrained model."""
+    """Fetch a resource."""
     args = parse_args()
 
-    has_succeed = download_models.download_model(
+    has_succeed = download_resources.download_resource(
         task_name=args.task_name,
-        model_name=args.model_name,
+        resource_name=args.resource_name,
         output_dir=args.output_dir,
         show_progress_bar=not args.disable_progress_bar,
         check_cached=not args.ignore_cached_files,
         clean_compressed_files=not args.keep_compressed_files,
-        check_model_hash=not args.ignore_model_hash,
+        check_resource_hash=not args.ignore_resource_hash,
         timeout_limit_seconds=args.timeout_limit,
     )
 
     if has_succeed:
-        print(f"Model downloaded sucessfully in '{args.output_dir}'.")
+        print(f"Resource downloaded sucessfully in '{args.output_dir}'.")
 
     else:
         print("Could not download file.")

@@ -1,11 +1,11 @@
-"""Check integrity of downloaded model."""
+"""Check integrity of downloaded resource."""
 import typing as t
 import hashlib
 
 
-def check_model_hash(
-    model_uri: str,
-    model_hash: str,
+def check_resource_hash(
+    resource_uri: str,
+    resource_hash: str,
     read_block_size_in_mib: int = 256,
     hash_fn: t.Callable[[], t.Any] = hashlib.sha256,
 ) -> bool:
@@ -13,14 +13,14 @@ def check_model_hash(
 
     Parameters
     ----------
-    model_uri : str
+    resource_uri : str
         File URI to compute hash from.
 
-    model_hash : str
+    resource_hash : str
         Expected hash value.
 
     read_block_size_in_mib : int, default=128
-        Size of blocks to read `model_uri` file, in MebiBytes (MiB).
+        Size of blocks to read `resource_uri` file, in MebiBytes (MiB).
 
     hash_fn : t.Callable[[], t.Any], default=hashlib.sha256
         Hash function to compute, from hashlib.
@@ -28,7 +28,7 @@ def check_model_hash(
     Returns
     -------
     hash_does_match : bool
-        True if model hash from `model_uri` matches provided `model_hash`.
+        True if resource hash from `resource_uri` matches provided `resource_hash`.
 
     See Also
     --------
@@ -38,8 +38,8 @@ def check_model_hash(
 
     read_block_size_in_b = 1024 * 1024 * read_block_size_in_mib
 
-    with open(model_uri, "rb") as f_in:
+    with open(resource_uri, "rb") as f_in:
         for data_chunk in iter(lambda: f_in.read(read_block_size_in_b), b""):
             hasher.update(data_chunk)
 
-    return bool(hasher.hexdigest() == model_hash)
+    return bool(hasher.hexdigest() == resource_hash)

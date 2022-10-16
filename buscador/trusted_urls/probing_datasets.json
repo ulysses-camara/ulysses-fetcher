@@ -1,0 +1,84 @@
+{
+	"probing_task": {
+		"dataset_wikipedia_ptbr_bigram_shift_v1": {
+			"sha256": "f6abfda14807530a6a28c2ff670baf756f3d6ee96fd89dd78827d6d71650e0bc",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1Jzhd5qRTzbdnfcKpnWZgQqgegC02UKOk&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/TLNJAz9ceXg9744/download/bigram_shift.zip"
+			]
+		},
+		"dataset_wikipedia_ptbr_coordination_inversion_v1": {
+			"sha256": "e7604dd99ae2fd3451199e01228d6830abd32fb258018932c4c86259ddc55a8b",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1iR6hSZDIj316e54ZApBave2ycwnMWXLB&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/Fcz4njZzTtLwygL/download/coordination_inversion.zip"
+			]
+		},
+		"dataset_wikipedia_ptbr_obj_number_v1": {
+			"sha256": "cf7bed6819ec8f0be22b7dad9e0e31357cec42c62457cb01bc023cbcfb3ced59",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1HEX8yfRYAiwhZ8x4DlMV1VZCT4eW_7eB&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/MGEARjdsJcsZPkx/download/obj_number.zip"
+			]
+		},
+		"dataset_wikipedia_ptbr_odd_man_out_v1": {
+			"sha256": "6ef0ae19377c052c6b1a5aa028c3a447360e8a7cf600dcf529f1d424cfafd1ce",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1kH-ehhhzlyR3ZfMN58qoFU0aE4jx2drS&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/Gi5ZNkNna4n4B3m/download/odd_man_out.zip"
+			]
+		},
+		"dataset_wikipedia_ptbr_past_present_v1": {
+			"sha256": "2a4712d21dc5e7f6fc30c96d462cf24b0f25ce1df899c2a4826eeea3b746dc4e",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1Uj6mk--Si6941HXxGKURHY-vUR8UWnk9&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/zqgxMczmnKQdJig/download/past_present.zip"
+			]
+		},
+		"dataset_wikipedia_ptbr_sentence_length_v1": {
+			"sha256": "766d99da3cbe7e87ffca26d427c180178b5d94f1a0f085c3cf9283b28e0a74a4",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1BiCzsWyBwRjNSkrlEDgW5pvTDMJEhdLN&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/L8w9tAYkSgzSTDr/download/sentence_length.zip"
+			]
+		},
+		"dataset_wikipedia_ptbr_subj_number_v1": {
+			"sha256": "bbdbe05983296ab1193215d929737a942732f7758c3122683c452fa0b70a4120",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1InBfnaWhYApT-dSJOToYko2yL3UhjpRH&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/in6Re5C4TcyZemA/download/subj_number.zip"
+			]
+		},
+		"dataset_wikipedia_ptbr_top_constituents_v1": {
+			"sha256": "55653ebf470208995d094cf1f249b6fd0bfbac85e3b2df2ee6888e0353bfe27c",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1wf1nRDeJMHASrqzgHqNcJtXHFETvWBeJ&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/QqY9BeiTd2eoL6G/download/top_constituents.zip"
+			]
+		},
+		"dataset_wikipedia_ptbr_tree_depth_v1": {
+			"sha256": "075bc845a93ec7cc443508b8ece8ccfb1a734e069e15e1ba0537e0fa31c39c2a",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1vKM_9tFK9gHdvq0wVK6AyjbXzQJosBPi&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/dydMGX8w93oxmPH/download/tree_depth.zip"
+			]
+		},
+		"dataset_wikipedia_ptbr_word_content_v1": {
+			"sha256": "3bd38e0d8abee3043ca350b5fab7f64fb1ae414b0cbf2abdbe03d50a07ce53f9",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1ywZ4v349MDtXZQyzVZ8U-hZ2gyRSe03s&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/EKwmzYDH8ADRtg8/download/word_content.zip"
+			]
+		}
+	}
+}

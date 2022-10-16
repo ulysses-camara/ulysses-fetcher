@@ -1,4 +1,4 @@
-"""Retrieve pretrained models for the Ulysses project."""
+"""Retrieve resources for the Ulysses project."""
 import typing as t
 import urllib.request
 import os
@@ -16,32 +16,40 @@ from . import decompress
 
 
 __all__ = [
-    "download_model",
+    "download_resource",
     "get_available_tasks",
-    "get_task_available_models",
+    "get_task_available_resources",
 ]
 
 
-DEFAULT_URIS: t.Dict[str, t.Any]
-DEFAULT_URIS_CONFIG_FILE = os.path.join(os.path.dirname(__file__), "default_uris.json")
+DEFAULT_URIS: t.Dict[str, t.Any] = {}
+DEFAULT_URIS_CONFIG_DIR = os.path.join(os.path.dirname(__file__), "trusted_urls")
 
 try:
-    with open(DEFAULT_URIS_CONFIG_FILE, "r", encoding="utf-8") as f_config:
-        DEFAULT_URIS = json.load(f_config)
+    for config_file_uri in glob.glob(os.path.join(DEFAULT_URIS_CONFIG_DIR, "*.json")):
+        with open(config_file_uri, "r", encoding="utf-8") as f_config:
+            new_config = json.load(f_config)
+
+        for key, value in new_config.items():
+            if key in DEFAULT_URIS:
+                DEFAULT_URIS[key].update(value)
+            else:
+                DEFAULT_URIS[key] = value
+
 
 except (OSError, FileNotFoundError):
     DEFAULT_URIS = {}
     warnings.warn(
         message=(
-            f"Could not open '{DEFAULT_URIS_CONFIG_FILE}', hence this package will be unable "
-            "to retrieve pretrained model URLs."
+            f"Could not open '{DEFAULT_URIS_CONFIG_DIR}', hence this package will be unable "
+            "to retrieve resource URLs."
         ),
         category=RuntimeWarning,
     )
 
 
-class ModelHashError(Exception):
-    """Error raises when downloaded model hash does not match expected hash value."""
+class ResourceHashError(Exception):
+    """Error raises when downloaded resource hash does not match expected hash value."""
 
 
 @contextlib.contextmanager
@@ -120,7 +128,7 @@ def download_file(
         if os.path.isfile(output_uri):
             os.remove(output_uri)
 
-        raise ConnectionError(f"Could not download pretrained model from '{output_uri}'.") from err
+        raise ConnectionError(f"Could not download resource from '{output_uri}'.") from err
 
     except KeyboardInterrupt as kbi_err:
         if os.path.isfile(output_uri):
@@ -131,26 +139,26 @@ def download_file(
     return
 
 
-def download_model_from_url(
-    model_url: str,
+def download_resource_from_url(
+    resource_url: str,
     output_uri: str,
     show_progress_bar: bool = True,
     check_cached: bool = True,
     clean_compressed_files: bool = True,
-    expected_model_hash: t.Optional[str] = None,
+    expected_resource_hash: t.Optional[str] = None,
     timeout_limit_seconds: int = 10,
 ) -> None:
-    """Download a pretrained model from the provided `url`.
+    """Download a resource from the provided `url`.
 
     Zipped files are decompressed.
 
     Parameters
     ----------
-    model_url : str
-        URL to donwload pretrained model from.
+    resource_url : str
+        URL to donwload resource from.
 
     output_uri : str
-        Output URI (full path, ending with the filename and its extension) to save model.
+        Output URI (full path, ending with the filename and its extension) to save resource.
 
     show_progress_bar: bool, default=True
         If True, show download progress bar.
@@ -161,8 +169,8 @@ def download_model_from_url(
     clean_compressed_files : bool, default=True
         If True, delete compressed files after decompression.
 
-    expected_model_hash : str or None, default=None
-        Check whether downloaded model hash matches the provided value.
+    expected_resource_hash : str or None, default=None
+        Check whether downloaded resource hash matches the provided value.
 
     timeout_limit_seconds : int, default=10
         Timeout limit for stale downloads, in seconds.
@@ -182,15 +190,15 @@ def download_model_from_url(
             return
 
     download_file(
-        url=model_url,
+        url=resource_url,
         output_uri=output_uri,
         show_progress_bar=show_progress_bar,
         check_cached=check_cached,
         timeout_limit_seconds=timeout_limit_seconds,
     )
 
-    hash_has_issues = expected_model_hash is not None and not integrity.check_model_hash(
-        model_uri=output_uri, model_hash=expected_model_hash
+    hash_has_issues = expected_resource_hash is not None and not integrity.check_resource_hash(
+        resource_uri=output_uri, resource_hash=expected_resource_hash
     )
 
     if hash_has_issues:
@@ -200,35 +208,36 @@ def download_model_from_url(
         if os.path.isdir(output_uri):
             shutil.rmtree(output_uri)
 
-        raise ModelHashError
+        raise ResourceHashError
 
     decompress.decompress(output_uri, clean_compressed_files=clean_compressed_files)
 
 
-def download_model(
+def download_resource(
     task_name: str,
-    model_name: str,
+    resource_name: str,
     output_dir: str = ".",
     show_progress_bar: bool = True,
     check_cached: bool = True,
     clean_compressed_files: bool = True,
-    check_model_hash: bool = True,
+    check_resource_hash: bool = True,
     timeout_limit_seconds: int = 10,
 ) -> bool:
-    """Download a pretrained model from the provided (`task_name`, `model_name`) pair.
+    """Download a resource from the provided (`task_name`, `resource_name`) pair.
 
-    Both `task_name` and `model_name` must be properly configured in ``default_uris.json``.
+    Both `task_name` and `resource_name` must be properly configured in ``trusted_urls`` directory.
 
     Parameters
     ----------
     task_name : str
-        Model task name.
+        Resource task name. Call ``buscador.get_available_tasks()`` for a complete task list.
 
-    model_name : str
-        Model name to download.
+    resource_name : str
+        Resource name to download. Call ``buscador.get_task_available_resources(task_name)``
+        for a complete resource list for a specific ``task_name``.
 
     output_dir : str
-        Directory to save the downloaded model.
+        Directory to save the downloaded resource.
 
     show_progress_bar: bool, default=True
         If True, show download progress bar.
@@ -239,8 +248,8 @@ def download_model(
     clean_compressed_files : bool, default=True
         If True, delete compressed files after decompression.
 
-    check_model_hash : bool, default=True
-        If True, verify if the downloaded model hash (SHA256) matches the correct value.
+    check_resource_hash : bool, default=True
+        If True, verify if the downloaded resource hash (SHA256) matches the correct value.
 
     timeout_limit_seconds : int, default=10
         Timeout limit for stale downloads, in seconds.
@@ -250,10 +259,10 @@ def download_model(
     was_succeed : bool
         True if file was downloaded successfully (or found locally when `check_cached=True`).
     """
-    ModelConfigType = t.Dict[str, t.Any]
+    ResourceConfigType = t.Dict[str, t.Any]
 
     try:
-        model_map: t.Dict[str, ModelConfigType] = DEFAULT_URIS[task_name]
+        resource_map: t.Dict[str, ResourceConfigType] = DEFAULT_URIS[task_name]
 
     except KeyError as k_err:
         valid_tasks = ", ".join(sorted(DEFAULT_URIS.keys()))
@@ -264,14 +273,15 @@ def download_model(
         ) from k_err
 
     try:
-        model_config: ModelConfigType = model_map[model_name]
+        resource_config: ResourceConfigType = resource_map[resource_name]
 
     except KeyError as k_err:
-        valid_models = ", ".join(sorted(model_map.keys()))
+        valid_resources = ", ".join(sorted(resource_map.keys()))
 
         raise ValueError(
-            f"Unknown model '{model_name}' for task '{task_name}'. Please verify is the provided "
-            f"task is correct and, if so, provide one of the following models: {valid_models}."
+            f"Unknown resource '{resource_name}' for task '{task_name}'. Please verify is the "
+            "provided task is correct and, if so, provide one of the following resources: "
+            f"{valid_resources}."
         ) from k_err
 
     output_dir = output_dir.strip()
@@ -281,37 +291,37 @@ def download_model(
 
     os.makedirs(output_dir, exist_ok=True)
 
-    model_sha256 = model_config["sha256"]
-    f_extension = model_config["file_extension"]
+    resource_sha256 = resource_config["sha256"]
+    f_extension = resource_config["file_extension"]
 
-    for model_url in model_config["urls"]:
-        output_uri = os.path.join(output_dir, f"{model_name}{f_extension}").strip()
-        model_url = model_url.strip()
+    for resource_url in resource_config["urls"]:
+        output_uri = os.path.join(output_dir, f"{resource_name}{f_extension}").strip()
+        resource_url = resource_url.strip()
 
         try:
-            download_model_from_url(
-                model_url=model_url,
+            download_resource_from_url(
+                resource_url=resource_url,
                 output_uri=output_uri,
                 show_progress_bar=show_progress_bar,
                 check_cached=check_cached,
                 clean_compressed_files=clean_compressed_files,
-                expected_model_hash=model_sha256 if check_model_hash else None,
+                expected_resource_hash=resource_sha256 if check_resource_hash else None,
                 timeout_limit_seconds=timeout_limit_seconds,
             )
 
         except (ConnectionError, urllib.error.URLError) as conn_err:
             warnings.warn(
                 message=(
-                    f"Could not retrieve '{model_name}' for '{task_name}' task in "
-                    f"'{model_url}' address (error message: {conn_err})."
+                    f"Could not retrieve '{resource_name}' for '{task_name}' task in "
+                    f"'{resource_url}' address (error message: {conn_err})."
                 ),
                 category=RuntimeWarning,
             )
             continue
 
-        except ModelHashError:
+        except ResourceHashError:
             warnings.warn(
-                message=f"Unmatched model hash (SHA256) from URL '{model_url}'. Skipping it.",
+                message=f"Unmatched resource hash (SHA256) from URL '{resource_url}'. Skipping it.",
                 category=RuntimeWarning,
             )
             continue
@@ -328,12 +338,12 @@ def download_model(
 
 
 def get_available_tasks() -> t.Tuple[str, ...]:
-    """Get all available tasks to get pretrained models from."""
+    """Get all available tasks to get resources from."""
     return tuple(DEFAULT_URIS.keys())
 
 
-def get_task_available_models(task_name: str) -> t.Tuple[str, ...]:
-    """Get all available models from the provided task.
+def get_task_available_resources(task_name: str) -> t.Tuple[str, ...]:
+    """Get all available resources from the provided task.
 
     See also
     --------
