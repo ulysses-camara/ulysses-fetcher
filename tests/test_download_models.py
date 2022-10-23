@@ -3,7 +3,6 @@ import os
 import shutil
 import glob
 import time
-import json
 
 import pytest
 
