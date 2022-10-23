@@ -34,7 +34,7 @@ python -m pip install "git+https://github.com/ulysses-camara/ulysses-fetcher"
 ### Datasets
 | Task name | Dataset name |
 | --------- | ---------- |
-| `probing_task`     | - `dataset_wikipedia_ptbr_bigram_shift_v1` <br> - `dataset_wikipedia_ptbr_coordination_inversion_v1` <br> - `dataset_wikipedia_ptbr_obj_number_v1` <br> - `dataset_wikipedia_ptbr_odd_man_out_v1` <br> - `dataset_wikipedia_ptbr_past_present_v1` <br> - `dataset_wikipedia_ptbr_sentence_length_v1` <br> - `dataset_wikipedia_ptbr_subj_number_v1` <br> - `dataset_wikipedia_ptbr_top_constituents_v1` <br> - `dataset_wikipedia_ptbr_tree_depth_v1` <br> - `dataset_wikipedia_ptbr_word_content_v1` |
+| `probing_task`     | - `dataset_wikipedia_ptbr_bigram_shift_v1` <br> - `dataset_wikipedia_ptbr_coordination_inversion_v1` <br> - `dataset_wikipedia_ptbr_obj_number_v1` <br> - `dataset_wikipedia_ptbr_odd_man_out_v1` <br> - `dataset_wikipedia_ptbr_past_present_v1` <br> - `dataset_wikipedia_ptbr_sentence_length_v1` <br> - `dataset_wikipedia_ptbr_subj_number_v1` <br> - `dataset_wikipedia_ptbr_top_constituents_v1` <br> - `dataset_wikipedia_ptbr_tree_depth_v1` <br> - `dataset_wikipedia_ptbr_word_content_v1`<br> - `dataset_sp_court_cases_bigram_shift_v1` <br> - `dataset_sp_court_cases_coordination_inversion_v1` <br> - `dataset_sp_court_cases_obj_number_v1` <br> - `dataset_sp_court_cases_odd_man_out_v1` <br> - `dataset_sp_court_cases_past_present_v1` <br> - `dataset_sp_court_cases_sentence_length_v1` <br> - `dataset_sp_court_cases_subj_number_v1` <br> - `dataset_sp_court_cases_top_constituents_v1` <br> - `dataset_sp_court_cases_tree_depth_v1` <br> - `dataset_sp_court_cases_word_content_v1` |
 
 
 ---
