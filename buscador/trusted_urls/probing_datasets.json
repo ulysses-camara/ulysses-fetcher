@@ -1,7 +1,7 @@
 {
 	"probing_task": {
 		"dataset_wikipedia_ptbr_bigram_shift_v1": {
-			"sha256": "ddd29611d0285e288a9d321d655138c5a9c17ce0dbb2c69af6a56a903770dfa1",
+			"sha256": "4c55fe0a528bf8d63e19665306452bcc4802899c2714bbdedb53ccc52afb78f2",
 			"file_extension": ".zip",
 			"urls": [
                 "https://drive.google.com/uc?id=1Jzhd5qRTzbdnfcKpnWZgQqgegC02UKOk&export=download&confirm=t",
@@ -9,7 +9,7 @@
 			]
 		},
 		"dataset_wikipedia_ptbr_coordination_inversion_v1": {
-			"sha256": "854c3e92d8463d7ef26803bad591c6d210309af4ee7ba61e7b19a4fea4f07601",
+			"sha256": "c524c52ef7c37fc96dfaa4cee78bf53bcec4d21d2e0ef7e5764ddeb3b6244e84",
 			"file_extension": ".zip",
 			"urls": [
                 "https://drive.google.com/uc?id=1iR6hSZDIj316e54ZApBave2ycwnMWXLB&export=download&confirm=t",
@@ -17,7 +17,7 @@
 			]
 		},
 		"dataset_wikipedia_ptbr_obj_number_v1": {
-			"sha256": "799606b835d45340e0a91d739fa42c64910233b26480b4f0d45925e74f6e3951",
+			"sha256": "4146b3bec54bdc34f5ef8fc6c2a0608031c66dbb9060c40fa2e9d05b56bfedde",
 			"file_extension": ".zip",
 			"urls": [
                 "https://drive.google.com/uc?id=1HEX8yfRYAiwhZ8x4DlMV1VZCT4eW_7eB&export=download&confirm=t",
@@ -25,7 +25,7 @@
 			]
 		},
 		"dataset_wikipedia_ptbr_odd_man_out_v1": {
-			"sha256": "13931fa1205ec590c55c1e35ee4cbd9d5b111ca4c1330758293c9fb196c17900",
+			"sha256": "810484d5f2a044fa14213ff34ab31954a2d77d0d3fddbc833779b2cb8f94e6ef",
 			"file_extension": ".zip",
 			"urls": [
                 "https://drive.google.com/uc?id=1kH-ehhhzlyR3ZfMN58qoFU0aE4jx2drS&export=download&confirm=t",
@@ -33,7 +33,7 @@
 			]
 		},
 		"dataset_wikipedia_ptbr_past_present_v1": {
-			"sha256": "1e2b5ef58a550f2019f5a3f44fcdb3082886db30f08c06d2899b6f167793401a",
+			"sha256": "df00005613064510de840c229095c2f7eb6650eac77359cd2230c8fa0969c237",
 			"file_extension": ".zip",
 			"urls": [
                 "https://drive.google.com/uc?id=1Uj6mk--Si6941HXxGKURHY-vUR8UWnk9&export=download&confirm=t",
@@ -41,7 +41,7 @@
 			]
 		},
 		"dataset_wikipedia_ptbr_sentence_length_v1": {
-			"sha256": "df660204f81b88a953d1b9bb6b82d303c3b29f3146aa3e7731f2bfaea31e6d57",
+			"sha256": "e8b44c96a516c3225fa5410ac5e15b3b405214adf2b8c6aeff678f174b1c4639",
 			"file_extension": ".zip",
 			"urls": [
                 "https://drive.google.com/uc?id=1BiCzsWyBwRjNSkrlEDgW5pvTDMJEhdLN&export=download&confirm=t",
@@ -49,7 +49,7 @@
 			]
 		},
 		"dataset_wikipedia_ptbr_subj_number_v1": {
-			"sha256": "1f020bacd84c230bdcdb866789f4a3524cf33c4a039f64cdc9055aac647337b9",
+			"sha256": "458fe85c6dc256649d164ab43eee23aa5476a46f9051d65134a662d4140ec687",
 			"file_extension": ".zip",
 			"urls": [
                 "https://drive.google.com/uc?id=1InBfnaWhYApT-dSJOToYko2yL3UhjpRH&export=download&confirm=t",
@@ -57,7 +57,7 @@
 			]
 		},
 		"dataset_wikipedia_ptbr_top_constituents_v1": {
-			"sha256": "c4201e2f32b953fcb52ffd1a1315e685dc05f30cd1fff4f9473455d9409cac46",
+			"sha256": "0f8251765cc1c1aff4fecd3b85f1970b8b82a565dccbce07a9350e71c0768228",
 			"file_extension": ".zip",
 			"urls": [
                 "https://drive.google.com/uc?id=1wf1nRDeJMHASrqzgHqNcJtXHFETvWBeJ&export=download&confirm=t",
@@ -65,7 +65,7 @@
 			]
 		},
 		"dataset_wikipedia_ptbr_tree_depth_v1": {
-			"sha256": "2b0194efc97e6fc6158ee7b9c3b1ba08f1446e5141753d8f06819e2ea9b32a7d",
+			"sha256": "a3f1b7e93e1d3e25cd1f1574cd75839dd4dc795d0a4ff9075fbe682f50004b05",
 			"file_extension": ".zip",
 			"urls": [
                 "https://drive.google.com/uc?id=1vKM_9tFK9gHdvq0wVK6AyjbXzQJosBPi&export=download&confirm=t",
@@ -73,11 +73,91 @@
 			]
 		},
 		"dataset_wikipedia_ptbr_word_content_v1": {
-			"sha256": "036ef3a65939496e27f206fbe5c39746bf88ecb40983745556f84474cccb9361",
+			"sha256": "cdf8a77eb789e6d2b91584020522eeabc377873ec42ce45317c42cdfb4398845",
 			"file_extension": ".zip",
 			"urls": [
                 "https://drive.google.com/uc?id=1ywZ4v349MDtXZQyzVZ8U-hZ2gyRSe03s&export=download&confirm=t",
                 "https://cloud.andrelab.icmc.usp.br/s/EKwmzYDH8ADRtg8/download/word_content.zip"
+			]
+		},
+		"dataset_sp_court_cases_bigram_shift_v1": {
+			"sha256": "58cd1ef5fab84322820014c2520148c6127fa071c4b1a8ec566050164ed642c1",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1rgjas-gz6GPBLVycUetiugtDypf-kLCf&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/Tsx5rscmYR5bNqM/download/dataset_sp_court_cases_bigram_shift_v1.zip"
+			]
+		},
+		"dataset_sp_court_cases_coordination_inversion_v1": {
+			"sha256": "2df20bfde58c4dd57646d333161fb15f62529580704edabb9a8a5bfab83777c4",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1JY6Mgq7mzpbOabzjH1LYeCKqi_qOdilX&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/eQeDYr9b2qr925x/download/dataset_sp_court_cases_coordination_inversion_v1.zip"
+			]
+		},
+		"dataset_sp_court_cases_obj_number_v1": {
+			"sha256": "3f25dcfef17cadbe4cb5464402297e371c56fea9e260da182b4888e982aa52b2",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1bsHROdrjhaSW0egjRQQp3lVm2QnwDpNN&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/E5EY5C8NgyQgk5y/download/dataset_sp_court_cases_obj_number_v1.zip"
+			]
+		},
+		"dataset_sp_court_cases_odd_man_out_v1": {
+			"sha256": "058e6d87badd5999dd7f8f1a0c2202b0b0cedaf4e994a908196d2b0eba5f50b3",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1tBVfwn5TJtZeVvp0CfSsJ4PHW02Stvhr&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/fLMNo8KGyyywjrT/download/dataset_sp_court_cases_odd_man_out_v1.zip"
+			]
+		},
+		"dataset_sp_court_cases_past_present_v1": {
+			"sha256": "480fd011a0847ba20610389887f49156d8483a87302005e0584d52f2b595f158",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=15LlAbr3lTH0Da3p30wQT0oUv4RQ6wF6e&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/LQE7s7zayR8HfCr/download/dataset_sp_court_cases_past_present_v1.zip"
+			]
+		},
+		"dataset_sp_court_cases_sentence_length_v1": {
+			"sha256": "ae7568e84598f904ba2be9f79dbaa8df2444771fef78fb5b6e40fd37e7b31820",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1b_8ZLPr1MDe7DQTbJODuLmnYudL5CAXH&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/m9yKaAaJktwkeJa/download/dataset_sp_court_cases_sentence_length_v1.zip"
+			]
+		},
+		"dataset_sp_court_cases_subj_number_v1": {
+			"sha256": "d99083a49b337f6dffb3cf3abc640b388a3d60b421b85cc5098edf1e46a51e0a",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1EjAON0EZ_ilPKplVwjSDXCYlSLA3Jwcw&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/9QDqa9EHgi3Ne7H/download/dataset_sp_court_cases_subj_number_v1.zip"
+			]
+		},
+		"dataset_sp_court_cases_top_constituents_v1": {
+			"sha256": "603f5546f0c53f47e8bbf240a015ebfa96fd6d3be2c46cb5bd09c45df4e64b6e",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1-V1eJfFjmnHislMzC3LKlZnejPn9ZfMq&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/QXH2rnFYPGt9xcW/download/dataset_sp_court_cases_top_constituents_v1.zip"
+			]
+		},
+		"dataset_sp_court_cases_tree_depth_v1": {
+			"sha256": "4c276bde77a760fb1773e4ea02090129608a24a2a1e981f8233f1de752772d7d",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1NLc_0RnJNq_BruukmGPzwRuJK88NwjKq&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/t7qg9iQBHZkG7e2/download/dataset_sp_court_cases_tree_depth_v1.zip"
+			]
+		},
+		"dataset_sp_court_cases_word_content_v1": {
+			"sha256": "4e0666676fefa4d97fca8b60b792cb9077cb3b7b5e57954e889bfb5c28742c6c",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=13CXQWqRzDlScC3pRTqX-_aQ79qDsYwIp&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/6qMyppDHDiJBfqy/download/dataset_sp_court_cases_word_content_v1.zip"
 			]
 		}
 	}
