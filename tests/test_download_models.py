@@ -3,10 +3,29 @@ import os
 import shutil
 import glob
 import time
+import json
 
 import pytest
 
 import buscador
+
+
+def test_trusted_urls_integrity():
+    """Check if all resource URLs and SHA256 hashes are unique."""
+    all_hashes = set()
+    all_urls = set()
+
+    for _, task_resources in buscador.DEFAULT_URIS.items():
+        for _, task_metadata in task_resources.items():
+            cur_sha256 = task_metadata["sha256"]
+            cur_urls = task_metadata["urls"]
+
+            assert cur_sha256 not in all_hashes
+            all_hashes.add(cur_sha256)
+
+            for url in cur_urls:
+                assert url not in all_urls
+                all_urls.add(url)
 
 
 @pytest.mark.parametrize(
