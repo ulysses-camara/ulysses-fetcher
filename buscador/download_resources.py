@@ -19,6 +19,8 @@ __all__ = [
     "download_resource",
     "get_available_tasks",
     "get_task_available_resources",
+    "DEFAULT_URIS",
+    "DEFAULT_URIS_CONFIG_DIR",
 ]
 
 
