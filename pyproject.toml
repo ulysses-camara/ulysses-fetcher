@@ -4,7 +4,7 @@ requires = ["flit_core >=3.2,<4"]
 
 [project]
 name = "buscador"
-version = "1.0.0"
+version = "1.1.0"
 description = "Buscador de conjuntos de dados e modelos pré-treinados para o projeto Ulysses."
 authors = [
 	{name="felsiq", email= "felipe.siqueira@usp.br"}
