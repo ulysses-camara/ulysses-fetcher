@@ -97,6 +97,7 @@ def test_download_resources(resource_name: str, task_name: str):
         check_cached=False,
         clean_compressed_files=True,
         check_resource_hash=True,
+        timeout_limit_seconds=60,
     )
 
     output_uri = os.path.join(output_dir, resource_name)
@@ -114,6 +115,7 @@ def test_download_resources(resource_name: str, task_name: str):
         check_cached=True,
         clean_compressed_files=True,
         check_resource_hash=True,
+        timeout_limit_seconds=60,
     )
 
     t_delta = time.perf_counter() - t_start
@@ -162,6 +164,7 @@ def test_keep_compressed_file():
         check_cached=True,
         clean_compressed_files=False,
         check_resource_hash=True,
+        timeout_limit_seconds=60,
     )
 
     t_delta = time.perf_counter() - t_start
