@@ -159,6 +159,246 @@
                 "https://drive.google.com/uc?id=13CXQWqRzDlScC3pRTqX-_aQ79qDsYwIp&export=download&confirm=t",
                 "https://cloud.andrelab.icmc.usp.br/s/6qMyppDHDiJBfqy/download/dataset_sp_court_cases_word_content_v1.zip"
 			]
+		},
+		"dataset_leg_docs_ptbr_bigram_shift_v1": {
+			"sha256": "eb64a9764de47f8085f17ad11d5e05f57c19e198ba229d7aa88d16027191a106",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1PAaY-YV7FXxllZ9Vi8T2HH_gI8mPqYRV&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/zYMA9m6qBQdYYAZ/download/dataset_leg_docs_ptbr_bigram_shift_v1.zip"
+			]
+		},
+		"dataset_leg_docs_ptbr_coordination_inversion_v1": {
+			"sha256": "12238bb50cc9f29fa81ba05b21498804f3d954fc26ee17154d48dda5fbe47b46",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1YnfzOI-6EDmF9lpdGKN2JgkFwNJIqmLU&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/XNEqjk7TcW7RQi8/download/dataset_leg_docs_ptbr_coordination_inversion_v1.zip"
+			]
+		},
+		"dataset_leg_docs_ptbr_obj_number_v1": {
+			"sha256": "8b03eb368a79e0ba4be1d9167008625fe4d116ace538b13611b821bb7a2be907",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1vqfsuAkNw8boWbFLAiMpPi3WaVTa2zsy&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/NzSqADGaKNJPjT8/download/dataset_leg_docs_ptbr_obj_number_v1.zip"
+			]
+		},
+		"dataset_leg_docs_ptbr_odd_man_out_v1": {
+			"sha256": "4d91ae7c3decdfe5d17397a5b6269f7d9d1a9276a23e08ac1c82c2ae64edfff7",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1Cf7HXrGaASJcinem78JmmtuQte52q6yi&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/HiEaqHxH2BgGc2K/download/dataset_leg_docs_ptbr_odd_man_out_v1.zip"
+			]
+		},
+		"dataset_leg_docs_ptbr_past_present_v1": {
+			"sha256": "0e135201bc11f04fc86069208cd0502399f762fe95fec696c001e007cfb4e63c",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1qtN5WMjUvTIFwkKhpDJ-gTeKYYw2eVZY&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/jNHgzGCSEzaFXcd/download/dataset_leg_docs_ptbr_past_present_v1.zip"
+			]
+		},
+		"dataset_leg_docs_ptbr_sentence_length_v1": {
+			"sha256": "2723738ed7068b9c95411e272c3ec4308104aec16d93c327e7af919717bf7e60",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1wRwCwjXDPLx32lsvBrPhg6jZ0Ie1VxHa&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/AAatdP8ErZYdkmb/download/dataset_leg_docs_ptbr_sentence_length_v1.zip"
+			]
+		},
+		"dataset_leg_docs_ptbr_subj_number_v1": {
+			"sha256": "236eca7d85f0ecc3605fbc86631f1ffec476fb970005bcc5f1ae2e557700177c",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1jpp4bC7_8W2thKrkdPZU5hHXSDXnalUy&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/eQ5nqzBb5CwSqrq/download/dataset_leg_docs_ptbr_subj_number_v1.zip"
+			]
+		},
+		"dataset_leg_docs_ptbr_top_constituents_v1": {
+			"sha256": "0f8e51c8823d3646f2adbc15668990bc75345697ae3cea9e69fc82dd4c8b6630",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1PHTbb0yjBxHOQSxhJUt5csJdh-siLt_9&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/75TLYkRHDynCKKW/download/dataset_leg_docs_ptbr_top_constituents_v1.zip"
+			]
+		},
+		"dataset_leg_docs_ptbr_tree_depth_v1": {
+			"sha256": "579ac25eb7860e268e35e8f8c8ec6dbb5101fc802ca660d19dc10c84a8647362",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1p-KGgmB-LAXbqK8tTPxVpABeHStlu0y1&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/wH5QmMBFiB3xEfe/download/dataset_leg_docs_ptbr_tree_depth_v1.zip"
+			]
+		},
+		"dataset_leg_docs_ptbr_word_content_v1": {
+			"sha256": "54c193b85079c8265380b2d3581064cf26e10f3ff4dfa177f8fd58e37a33819f",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1DJ9uMpj86zqy5qhS905EUKaz5tovWfVt&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/ofoQ4fceFwdDpRM/download/dataset_leg_docs_ptbr_word_content_v1.zip"
+			]
+		},
+		"dataset_leg_pop_comments_ptbr_bigram_shift_v1": {
+			"sha256": "e681d81b864904e4c270e262c73475de097936350fc41e6ac485111aa55fe54a",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1v7Dy_SQTVEa8XekgC9QMO1hQLPlehccs&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/jWaCsHRCKHsbSoH/download/dataset_leg_pop_comments_ptbr_bigram_shift_v1.zip"
+			]
+		},
+		"dataset_leg_pop_comments_ptbr_coordination_inversion_v1": {
+			"sha256": "37891e4316ce6859be96b83f620b6e7c874f93c16a136fee6a52bd8b597482e8",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1pTESCmBycYemPR6tmylSuYlCDSny0LXE&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/MrtKQFQdHP6ioeE/download/dataset_leg_pop_comments_ptbr_coordination_inversion_v1.zip"
+			]
+		},
+		"dataset_leg_pop_comments_ptbr_obj_number_v1": {
+			"sha256": "2244c21efd21263649638ec5c19d3c657d4bcb9ccce748a338c31adbdf25fdc8",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1_4wxcNHv899LTjCzihL8JxFgROQHmyTH&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/3kYoTyCet2SGdSq/download/dataset_leg_pop_comments_ptbr_obj_number_v1.zip"
+			]
+		},
+		"dataset_leg_pop_comments_ptbr_odd_man_out_v1": {
+			"sha256": "6de396966aa764f43553d65766be89c0859b5fd82efd7e2c40562490d4fb2abc",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1Drpmd7oyMX-x4DIQrUXL94ntngTGqBQQ&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/NeCX9wcy69K8G9m/download/dataset_leg_pop_comments_ptbr_odd_man_out_v1.zip"
+			]
+		},
+		"dataset_leg_pop_comments_ptbr_past_present_v1": {
+			"sha256": "a169385e06c1d590f919082c189592f801d42d874e4196bd9395d7d5e4404745",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1kvHs_s1hoUG3kOGHfuzT-L9fUNsNBwFp&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/a3bcCyKLSs9fr9B/download/dataset_leg_pop_comments_ptbr_past_present_v1.zip"
+			]
+		},
+		"dataset_leg_pop_comments_ptbr_sentence_length_v1": {
+			"sha256": "343fcc1c4c72863e5c9afba2bedb6793f3a2678ca3831662c3f0c65d921a6c1c",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1RcCV5l4siIJtHcR_NZNntrwhSFTkPmxp&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/xDNGobX9ECrMyo8/download/dataset_leg_pop_comments_ptbr_sentence_length_v1.zip"
+			]
+		},
+		"dataset_leg_pop_comments_ptbr_subj_number_v1": {
+			"sha256": "bc8b3607f2fd2736159909fd465c99e8ee96c41ecb46bfe08959c2dcf0f8c4ae",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=17-HpRS3v0Nxur7rpBkNLl60F_o-5eP2W&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/LRjxmgEffttPF2G/download/dataset_leg_pop_comments_ptbr_subj_number_v1.zip"
+			]
+		},
+		"dataset_leg_pop_comments_ptbr_top_constituents_v1": {
+			"sha256": "e0f372d3d5bb2ef77fecfd77f4d6ab5b48442d417b8ba25cb950dac920dba5c8",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1k3QSvzRYxVgmQHhmje5yepjqswRef0IM&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/aKwCiWLWD4agpCY/download/dataset_leg_pop_comments_ptbr_top_constituents_v1.zip"
+			]
+		},
+		"dataset_leg_pop_comments_ptbr_tree_depth_v1": {
+			"sha256": "1ee5f822671539298b45082bef2467fab6f4be95527caa50ff923e03d106dda7",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1onM_bcXf2XsR8CUelSTK2Q012a0rDi_e&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/tHptQ4cEbZcqYPW/download/dataset_leg_pop_comments_ptbr_tree_depth_v1.zip"
+			]
+		},
+		"dataset_leg_pop_comments_ptbr_word_content_v1": {
+			"sha256": "468109c44937d26469f38b2f08f4581e1f68a70dccd531f46bebc096ba0aac38",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1dJotFScGwvnmkL2u51Og8kuJAf2Bym3S&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/gL9sGkdqncHFqtN/download/dataset_leg_pop_comments_ptbr_word_content_v1.zip"
+			]
+		},
+		"dataset_political_speeches_ptbr_bigram_shift_v1": {
+			"sha256": "5721b473e5a37fa94bf251891687886db2dd200c7e81ce95e9a30aac5f840a9a",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1JrHPlE8fiytcq978xtLxGSyjvpp41t60&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/m3EbH4qHEQBR7rB/download/dataset_political_speeches_ptbr_bigram_shift_v1.zip"
+			]
+		},
+		"dataset_political_speeches_ptbr_coordination_inversion_v1": {
+			"sha256": "8f3ba2a5457c8ec5123578ab54f46374ba2aa23e4747461c4a9757e4fe971c69",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=12ZKp-jLT6Q3WpS-LKfRYIPiVEXOvN41-&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/Pq99QZ3peZLDxqq/download/dataset_political_speeches_ptbr_coordination_inversion_v1.zip"
+			]
+		},
+		"dataset_political_speeches_ptbr_obj_number_v1": {
+			"sha256": "8ad6b3b7f6e3aeb5b89edb8beb4435aec5da21a434ddfe42cdc4c19aeef44908",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1g_QsNu7FwojRyyKkGlXKu05fxap_7LEN&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/q2TZdsL4WTM6BWE/download/dataset_political_speeches_ptbr_obj_number_v1.zip"
+			]
+		},
+		"dataset_political_speeches_ptbr_odd_man_out_v1": {
+			"sha256": "d14b2b249d197224f79129011863a7c185ae82bead48c5850980441d6f704de9",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1LmHAYHe6PcY-fPGLQnJ64IB12x72wEnJ&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/2XHkAAKL7i9Wmm9/download/dataset_political_speeches_ptbr_odd_man_out_v1.zip"
+			]
+		},
+		"dataset_political_speeches_ptbr_past_present_v1": {
+			"sha256": "819b4bfba365c8c263a705530f0e609a030e36b85ac3e07921c9bd2d93de367a",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=15bAaoFOz9ApmOYzYMOYFOjnRPfh2Aa62&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/5M3oSMYcX2ckQSK/download/dataset_political_speeches_ptbr_past_present_v1.zip"
+			]
+		},
+		"dataset_political_speeches_ptbr_sentence_length_v1": {
+			"sha256": "2e18ef2aba1e3a06a13a455a39a1debbb009a05cb2eceee3c9a3913d0f3c839d",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1fHjm37ruS6T2fjrvU8DX2QWK6gKjObj-&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/W2rZAS3rmk6E3Qk/download/dataset_political_speeches_ptbr_sentence_length_v1.zip"
+			]
+		},
+		"dataset_political_speeches_ptbr_subj_number_v1": {
+			"sha256": "8fd3ab8395655acd436447a36efaebbe582b6da0f41dd781250bad66de67a801",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1vnvVJ5X92HJp6mEonWtImN7PDjb2TVux&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/G7X9GFTQpHxk7dA/download/dataset_political_speeches_ptbr_subj_number_v1.zip"
+			]
+		},
+		"dataset_political_speeches_ptbr_top_constituents_v1": {
+			"sha256": "c86baad402fff6d47f3bb238ce9bfa91e71c6edff25d6f50fb53037d6e171092",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1c5NODehPoqk4bmf30dtQJygMfvxKDK8F&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/ceoZFErpr8ECjyj/download/dataset_political_speeches_ptbr_top_constituents_v1.zip"
+			]
+		},
+		"dataset_political_speeches_ptbr_tree_depth_v1": {
+			"sha256": "97e8d33869a5d551e93b17cfc0dc8b46718f363b004798a408c187b13350f6e2",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=1axMIjeQguRw76kphgxiqlmWXqUgQvTT2&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/9CNpTae9Naoom9Z/download/dataset_political_speeches_ptbr_tree_depth_v1.zip"
+			]
+		},
+		"dataset_political_speeches_ptbr_word_content_v1": {
+			"sha256": "2798d72974a0831dbd9ec0b7909e51ed3d968d4f5d88e8c98fba488293d3caa4",
+			"file_extension": ".zip",
+			"urls": [
+                "https://drive.google.com/uc?id=17pgX3UDSjFvRw8v-OpiXlAH4EfJbDHvE&export=download&confirm=t",
+                "https://cloud.andrelab.icmc.usp.br/s/F8NBJoHwWZL8JPT/download/dataset_political_speeches_ptbr_word_content_v1.zip"
+			]
 		}
 	}
 }
