@@ -33,6 +33,14 @@
 				"https://drive.google.com/uc?id=1UzbQMOvHNZxkvwN5sT2gizca2DY5Uow7&export=download&confirm=t",
 				"https://cloud.andrelab.icmc.usp.br/s/ZEDegCCM98SkTto/download/distil_sbert_br_ctimproved_12_epochs_v1.zip"
 			]
+		},
+		"ulysses_LaBSE_30000" : {
+			"sha256": "c8ed4b52b3d4b19c2dbeac488db71c90821f946454fd04f8f6cbf3c7c635f9f0",
+			"file_extension": ".zip",
+			"urls": [
+				"https://drive.google.com/uc?id=1Ot5LXEV3pYype5hZBLB11M1OgL8JWV5k&export=download&confirm=t",
+				"https://cloud.andrelab.icmc.usp.br/s/gwT8nDCjD74TEzA/download/ulysses_LaBSE_30000.zip"
+			]
 		}
 	}
 }
