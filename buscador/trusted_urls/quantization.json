@@ -1,0 +1,12 @@
+{
+	"quantization": {
+		"ulysses_tesemo_v2_subset_static_quantization": {
+			"sha256": "39b55070eb3ba96f1052f06e2761166b72628142493f8c9a5cb1fba485c36209",
+			"file_extension": ".zip",
+			"urls": [
+				"https://drive.google.com/uc?id=1Jmt4v5SDx-BrDBqSCrFFGHVupdgs9hbL&export=download&confirm=t",
+				"https://cloud.andrelab.icmc.usp.br/s/zwSA4f3XP9ErQDx/download/ulysses_tesemo_v2_subset_static_quantization.zip"
+			]
+		}
+	}
+}
