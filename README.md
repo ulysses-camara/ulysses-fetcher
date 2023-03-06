@@ -10,6 +10,7 @@ Fetch resources for Ulysses project.
 2. [Available resources](#available-resources)
     1. [Pretrained machine learning models](#pretrained-machine-learning-models)
     2. [Datasets](#datasets)
+    3. [Deprecated resources](#deprecated-resources)
 3. [Usage as package](#usage-as-package)
 4. [Usage by command line](#usage-by-command-line)
 5. [For developers](#for-developers)
@@ -25,17 +26,26 @@ python -m pip install "git+https://github.com/ulysses-camara/ulysses-fetcher"
 ---
 
 ## Available resources
+
 ### Pretrained machine learning models
+
 | Task name | Model name |
 | --------- | ---------- |
-| `legal_text_segmentation` | - `2_layer_6000_vocab_size_bert`<br> - `512_hidden_dim_6000_vocab_size_1_layer_lstm`<br> - `6000_subword_tokenizer` |
+| `legal_text_segmentation` | - `2_layer_6000_vocab_size_bert_v2` <br> - `4_layer_6000_vocab_size_bert_v2` <br> - `256_hidden_dim_6000_vocab_size_1_layer_lstm_v2`<br> - `6000_subword_tokenizer`|
 | `sentence_similarity`     | - `distil_sbert_br_ctimproved_12_epochs_v1` <br> - `ulysses_LaBSE_3000` |
 
 ### Datasets
+
 | Task name | Dataset name |
 | --------- | ---------- |
 | `probing_task`     | - `dataset_wikipedia_ptbr_bigram_shift_v1` <br> - `dataset_wikipedia_ptbr_coordination_inversion_v1` <br> - `dataset_wikipedia_ptbr_obj_number_v1` <br> - `dataset_wikipedia_ptbr_odd_man_out_v1` <br> - `dataset_wikipedia_ptbr_past_present_v1` <br> - `dataset_wikipedia_ptbr_sentence_length_v1` <br> - `dataset_wikipedia_ptbr_subj_number_v1` <br> - `dataset_wikipedia_ptbr_top_constituents_v1` <br> - `dataset_wikipedia_ptbr_tree_depth_v1` <br> - `dataset_wikipedia_ptbr_word_content_v1` <br> - `dataset_sp_court_cases_bigram_shift_v1` <br> - `dataset_sp_court_cases_coordination_inversion_v1` <br> - `dataset_sp_court_cases_obj_number_v1` <br> - `dataset_sp_court_cases_odd_man_out_v1` <br> - `dataset_sp_court_cases_past_present_v1` <br> - `dataset_sp_court_cases_sentence_length_v1` <br> - `dataset_sp_court_cases_subj_number_v1` <br> - `dataset_sp_court_cases_top_constituents_v1` <br> - `dataset_sp_court_cases_tree_depth_v1` <br> - `dataset_sp_court_cases_word_content_v1` <br> - `dataset_political_speeches_ptbr_bigram_shift_v1` <br> - `dataset_political_speeches_ptbr_coordination_inversion_v1` <br> - `dataset_political_speeches_ptbr_obj_number_v1` <br> - `dataset_political_speeches_ptbr_odd_man_out_v1` <br> - `dataset_political_speeches_ptbr_past_present_v1` <br> - `dataset_political_speeches_ptbr_sentence_length_v1` <br> - `dataset_political_speeches_ptbr_subj_number_v1` <br> - `dataset_political_speeches_ptbr_top_constituents_v1` <br> - `dataset_political_speeches_ptbr_tree_depth_v1` <br> - `dataset_political_speeches_ptbr_word_content_v1` <br> - `dataset_leg_pop_comments_ptbr_bigram_shift_v1` <br> - `dataset_leg_pop_comments_ptbr_coordination_inversion_v1` <br> - `dataset_leg_pop_comments_ptbr_obj_number_v1` <br> - `dataset_leg_pop_comments_ptbr_odd_man_out_v1` <br> - `dataset_leg_pop_comments_ptbr_past_present_v1` <br> - `dataset_leg_pop_comments_ptbr_sentence_length_v1` <br> - `dataset_leg_pop_comments_ptbr_subj_number_v1` <br> - `dataset_leg_pop_comments_ptbr_top_constituents_v1` <br> - `dataset_leg_pop_comments_ptbr_tree_depth_v1` <br> - `dataset_leg_pop_comments_ptbr_word_content_v1` <br> - `dataset_leg_docs_ptbr_bigram_shift_v1` <br> - `dataset_leg_docs_ptbr_coordination_inversion_v1` <br> - `dataset_leg_docs_ptbr_obj_number_v1` <br> - `dataset_leg_docs_ptbr_odd_man_out_v1` <br> - `dataset_leg_docs_ptbr_past_present_v1` <br> - `dataset_leg_docs_ptbr_sentence_length_v1` <br> - `dataset_leg_docs_ptbr_subj_number_v1` <br> - `dataset_leg_docs_ptbr_top_constituents_v1` <br> - `dataset_leg_docs_ptbr_tree_depth_v1` <br> - `dataset_leg_docs_ptbr_word_content_v1` |
 | `quantization` | - `ulysses_tesemo_v2_subset_static_quantization` |
+
+### Deprecated resources
+
+| Task name | Model name |
+| --------- | ---------- |
+| `legal_text_segmentation` | - ~~`2_layer_6000_vocab_size_bert`~~ (DEPRECATED) <br> - ~~`512_hidden_dim_6000_vocab_size_1_layer_lstm`~~ (DEPRECATED) |
 
 ---
 
