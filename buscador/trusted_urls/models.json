@@ -1,46 +1,74 @@
 {
-	"legal_text_segmentation": {
-		"6000_subword_tokenizer": {
-			"sha256": "8891afe49c059486cfc121326f974babe7402654713e06a0ac82429c05f43101",
-			"file_extension": ".zip",
-			"urls": [
-				"https://drive.google.com/uc?id=1PhPnJnXx7o9XkurZpBmIlf9cCDldhpZC&export=download&confirm=t",
-				"https://cloud.andrelab.icmc.usp.br/s/JxG9xBHNbqTmZf7/download/6000_subword_tokenizer.zip"
-			]
-		},
-		"512_hidden_dim_6000_vocab_size_1_layer_lstm": {
-			"sha256": "46ed0259e857cde0780cac926ac34505fbea605c2ee61a0cb7e4082b584b44a1",
-			"file_extension": ".pt",
-			"urls": [
-				"https://drive.google.com/uc?id=1NnPRsX98qMLdaoRxhksxr7TkbTVTRjF_&export=download&confirm=t",
-				"https://cloud.andrelab.icmc.usp.br/s/GP5mW4jMJTHNe7x/download/512_hidden_dim_6000_vocab_size_1_layer_lstm.pt"
-			]
-		},
-		"2_layer_6000_vocab_size_bert": {
-			"sha256": "eaea8fcd5025eabaf5faf2bb138b7685eb4ac1b015f0fc55c0800b423e30a849",
-			"file_extension": ".zip",
-			"urls": [
-				"https://drive.google.com/uc?id=14hztGOTk_O7FBuBLRoPmWJnLnMphxEOa&export=download&confirm=t",
-				"https://cloud.andrelab.icmc.usp.br/s/SeRPHBJJxNHAbP3/download/2_layer_6000_vocab_size_bert.zip"
-			]
-		}
-	},
-	"sentence_similarity": {
-		"distil_sbert_br_ctimproved_12_epochs_v1" : {
-			"sha256": "69df49d4c78da0161186e5761a762ef9632561ebf33aa41422c5d2db07d04ae5",
-			"file_extension": ".zip",
-			"urls": [
-				"https://drive.google.com/uc?id=1UzbQMOvHNZxkvwN5sT2gizca2DY5Uow7&export=download&confirm=t",
-				"https://cloud.andrelab.icmc.usp.br/s/ZEDegCCM98SkTto/download/distil_sbert_br_ctimproved_12_epochs_v1.zip"
-			]
-		},
-		"ulysses_LaBSE_30000" : {
-			"sha256": "c8ed4b52b3d4b19c2dbeac488db71c90821f946454fd04f8f6cbf3c7c635f9f0",
-			"file_extension": ".zip",
-			"urls": [
-				"https://drive.google.com/uc?id=1Ot5LXEV3pYype5hZBLB11M1OgL8JWV5k&export=download&confirm=t",
-				"https://cloud.andrelab.icmc.usp.br/s/gwT8nDCjD74TEzA/download/ulysses_LaBSE_30000.zip"
-			]
-		}
-	}
+  "legal_text_segmentation": {
+    "6000_subword_tokenizer": {
+      "sha256": "8891afe49c059486cfc121326f974babe7402654713e06a0ac82429c05f43101",
+      "file_extension": ".zip",
+      "urls": [
+        "https://drive.google.com/uc?id=10XCVCntAShL2NKcWjQKTdds7faktXYiJ&export=download&confirm=t",
+        "https://drive.google.com/uc?id=19hSSWgI9Y9-8eOkDJ-3cA-4B3vT-ZzUk&export=download&confirm=t",
+        "https://drive.google.com/uc?id=1PhPnJnXx7o9XkurZpBmIlf9cCDldhpZC&export=download&confirm=t",
+        "https://cloud.andrelab.icmc.usp.br/s/JxG9xBHNbqTmZf7/download/6000_subword_tokenizer.zip"
+      ]
+    },
+    "512_hidden_dim_6000_vocab_size_1_layer_lstm": {
+      "sha256": "46ed0259e857cde0780cac926ac34505fbea605c2ee61a0cb7e4082b584b44a1",
+      "file_extension": ".pt",
+      "urls": [
+        "https://drive.google.com/uc?id=11ZhXAGQbBIXEIjVq93enIFDmwHdJQnXQ&export=download&confirm=t",
+        "https://drive.google.com/uc?id=1NnPRsX98qMLdaoRxhksxr7TkbTVTRjF_&export=download&confirm=t",
+        "https://cloud.andrelab.icmc.usp.br/s/GP5mW4jMJTHNe7x/download/512_hidden_dim_6000_vocab_size_1_layer_lstm.pt"
+      ]
+    },
+    "2_layer_6000_vocab_size_bert": {
+      "sha256": "eaea8fcd5025eabaf5faf2bb138b7685eb4ac1b015f0fc55c0800b423e30a849",
+      "file_extension": ".zip",
+      "urls": [
+        "https://drive.google.com/uc?id=11M7xo6wNWQfGeb5qZWfrXQ6jt6bbJuoP&export=download&confirm=t",
+        "https://drive.google.com/uc?id=14hztGOTk_O7FBuBLRoPmWJnLnMphxEOa&export=download&confirm=t",
+        "https://cloud.andrelab.icmc.usp.br/s/SeRPHBJJxNHAbP3/download/2_layer_6000_vocab_size_bert.zip"
+      ]
+    },
+    "2_layer_6000_vocab_size_bert_v2": {
+      "sha256": "697a63cebf1199e8e1729d06b747bdb451dca52aeb84e31d8440bccff07e87ed",
+      "file_extension": ".zip",
+      "urls": [
+        "https://drive.google.com/uc?id=1p_t6fwaprEB621VfnpDjvlakgDsq-_sE&export=download&confirm=t",
+        "https://cloud.andrelab.icmc.usp.br/s/W8ZPBEnnqAETx5M/download/2_layer_6000_vocab_size_bert_v2.zip"
+      ]
+    },
+    "4_layer_6000_vocab_size_bert_v2": {
+      "sha256": "69386452147476c1fe92a4613ef0c8fbe182e66eeb618332a1fcc207a9ea2b52",
+      "file_extension": ".zip",
+      "urls": [
+        "https://drive.google.com/uc?id=1yAi5l_x71m5qYAs8NZ9Vs-LXCREZFMeL&export=download&confirm=t",
+        "https://cloud.andrelab.icmc.usp.br/s/FjsQFZMCn6JkZjc/download/4_layer_6000_vocab_size_bert_v2.zip"
+      ]
+    },
+    "256_hidden_dim_6000_vocab_size_1_layer_lstm_v2": {
+      "sha256": "26ee12a1276441edace56d258eb9b46917980a54e566799d8001360f12a525e8",
+      "file_extension": ".pt",
+      "urls": [
+        "https://drive.google.com/uc?id=1QHdnxGphRTJp-mkmbVgxYg5brT79noHU&export=download&confirm=t",
+        "https://cloud.andrelab.icmc.usp.br/s/M3nJ2JMLzKz8M35/download/256_hidden_dim_6000_vocab_size_1_layer_lstm_v2.pt"
+      ]
+    }
+  },
+  "sentence_similarity": {
+    "distil_sbert_br_ctimproved_12_epochs_v1" : {
+      "sha256": "69df49d4c78da0161186e5761a762ef9632561ebf33aa41422c5d2db07d04ae5",
+      "file_extension": ".zip",
+      "urls": [
+        "https://drive.google.com/uc?id=1UzbQMOvHNZxkvwN5sT2gizca2DY5Uow7&export=download&confirm=t",
+        "https://cloud.andrelab.icmc.usp.br/s/ZEDegCCM98SkTto/download/distil_sbert_br_ctimproved_12_epochs_v1.zip"
+      ]
+    },
+    "ulysses_LaBSE_30000" : {
+      "sha256": "c8ed4b52b3d4b19c2dbeac488db71c90821f946454fd04f8f6cbf3c7c635f9f0",
+      "file_extension": ".zip",
+      "urls": [
+        "https://drive.google.com/uc?id=1Ot5LXEV3pYype5hZBLB11M1OgL8JWV5k&export=download&confirm=t",
+        "https://cloud.andrelab.icmc.usp.br/s/gwT8nDCjD74TEzA/download/ulysses_LaBSE_30000.zip"
+      ]
+    }
+  }
 }
