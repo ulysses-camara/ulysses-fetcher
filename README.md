@@ -112,14 +112,17 @@ To register a new resource in Ulysses Fetcher, please follow the steps below:
 ```python
 import hashlib
 
-read_block_size_in_bytes = 64 * 1024 * 1024  # Read file in blocks of 64MiB; or any other amount.
-hasher = hashlib.sha256()
+def produce_hash(model_uri: str) -> str:
+    read_block_size_in_bytes = 64 * 1024 * 1024  # Read file in blocks of 64MiB; or any other amount.
+    hasher = hashlib.sha256()
+    
+    with open(model_uri, "rb") as f_in:
+        for data_chunk in iter(lambda: f_in.read(read_block_size_in_bytes), b""):
+            hasher.update(data_chunk)
+    
+    return hasher.hexdigest()
 
-with open("path_to_my_compressed_pretrained_resource", "rb") as f_in:
-    for data_chunk in iter(lambda: f_in.read(read_block_size_in_bytes), b""):
-        hasher.update(data_chunk)
-
-my_resource_sha256 = hasher.hexdigest()
+my_resource_sha256 = produce_hash("path/to/my_resource.zip")
 print(my_resource_sha256)
 ```
 5. Register your resource in a `JSON` file within the [trusted_urls directory](./buscador/trusted_urls/), providing the resource task, resource name, file extension (`.zip` or `.tar` for compressed resources), SHA256, and the direct download URLs as depicted in the exemple below (use [buscador/trusted_urls/models.json](./buscador/trusted_urls/models.json) as an exemple). You can either create a new `JSON` file or register your resource in an existing file, as long as you keep your resource semantically coherent with the configuration filename. Also note that Ulysses Fetcher will try to download resources by following the provided order in `urls`. Hence, later URLs are fallback addresses in case something went wrong with every previous URL.
