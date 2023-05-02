@@ -7,6 +7,7 @@
         "https://drive.google.com/uc?id=10XCVCntAShL2NKcWjQKTdds7faktXYiJ&export=download&confirm=t",
         "https://drive.google.com/uc?id=19hSSWgI9Y9-8eOkDJ-3cA-4B3vT-ZzUk&export=download&confirm=t",
         "https://drive.google.com/uc?id=1PhPnJnXx7o9XkurZpBmIlf9cCDldhpZC&export=download&confirm=t",
+        "https://drive.google.com/uc?id=1KXerQ4N_BF4h9_vofv8WMGdN6_UPyWVT&export=download&confirm=t",
         "https://cloud.andrelab.icmc.usp.br/s/JxG9xBHNbqTmZf7/download/6000_subword_tokenizer.zip"
       ]
     },
@@ -50,6 +51,30 @@
       "urls": [
         "https://drive.google.com/uc?id=1QHdnxGphRTJp-mkmbVgxYg5brT79noHU&export=download&confirm=t",
         "https://cloud.andrelab.icmc.usp.br/s/M3nJ2JMLzKz8M35/download/256_hidden_dim_6000_vocab_size_1_layer_lstm_v2.pt"
+      ]
+    },
+    "2_layer_6000_vocab_size_bert_v3": {
+      "sha256": "1d88adef5489dc4841fb8881a6f96d140af0004308d856f6f434f7ca57f7e9b4",
+      "file_extension": ".zip",
+      "urls": [
+        "https://drive.google.com/uc?id=1ttyrrmVjTTwWqP2kOKwPHIQECBsW1JWu&export=download&confirm=t",
+        "https://cloud.andrelab.icmc.usp.br/s/qJiXGFcd6A2Tsw2/download/2_layer_6000_vocab_size_bert_v3.zip"
+      ]
+    },
+    "4_layer_6000_vocab_size_bert_v3": {
+      "sha256": "ec2941741d667f5de73eee1d1aa4b73b91b591c41067af5c6e20edb7b9ee0ceb",
+      "file_extension": ".zip",
+      "urls": [
+        "https://drive.google.com/uc?id=1pmDucXrEnZJqAJhiOhyg0wH3c3KDm0Bm&export=download&confirm=t",
+        "https://cloud.andrelab.icmc.usp.br/s/mFWxZi7KEG3BfMc/download/4_layer_6000_vocab_size_bert_v3.zip"
+      ]
+    },
+    "256_hidden_dim_6000_vocab_size_1_layer_lstm_v3": {
+      "sha256": "d4b2ecae77096024c2065b249513246050cbdc07b732f60c6bef2489ab080f1c",
+      "file_extension": ".pt",
+      "urls": [
+        "https://drive.google.com/uc?id=13vs8TC7h52gA0HUQhvB970mqjL7X5NbV&export=download&confirm=t",
+        "https://cloud.andrelab.icmc.usp.br/s/qMcGcaYwRNEir3n/download/256_hidden_dim_6000_vocab_size_1_layer_lstm_v3.pt"
       ]
     }
   },
