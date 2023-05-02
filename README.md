@@ -31,7 +31,7 @@ python -m pip install "git+https://github.com/ulysses-camara/ulysses-fetcher"
 
 | Task name | Model name |
 | --------- | ---------- |
-| `legal_text_segmentation` | - `2_layer_6000_vocab_size_bert_v2` <br> - `4_layer_6000_vocab_size_bert_v2` <br> - `256_hidden_dim_6000_vocab_size_1_layer_lstm_v2`<br> - `6000_subword_tokenizer`|
+| `legal_text_segmentation` | - `2_layer_6000_vocab_size_bert_v3` <br> - `4_layer_6000_vocab_size_bert_v3` <br> - `256_hidden_dim_6000_vocab_size_1_layer_lstm_v3`<br> - `6000_subword_tokenizer`|
 | `sentence_similarity`     | - `distil_sbert_br_ctimproved_12_epochs_v1` <br> - `ulysses_LaBSE_3000` |
 
 ### Datasets
@@ -45,7 +45,7 @@ python -m pip install "git+https://github.com/ulysses-camara/ulysses-fetcher"
 
 | Task name | Model name |
 | --------- | ---------- |
-| `legal_text_segmentation` | - ~~`2_layer_6000_vocab_size_bert`~~ (DEPRECATED) <br> - ~~`512_hidden_dim_6000_vocab_size_1_layer_lstm`~~ (DEPRECATED) |
+| `legal_text_segmentation` | - ~~`2_layer_6000_vocab_size_bert_v2`~~ (DEPRECATED) <br> - ~~`4_layer_6000_vocab_size_bert_v2`~~ (DEPRECATED) <br> - ~~`256_hidden_dim_6000_vocab_size_1_layer_lstm_v2`~~ (DEPRECATED) <br> - ~~`2_layer_6000_vocab_size_bert`~~ (DEPRECATED) <br> - ~~`512_hidden_dim_6000_vocab_size_1_layer_lstm`~~ (DEPRECATED) |
 
 ---
 
@@ -113,7 +113,7 @@ To register a new resource in Ulysses Fetcher, please follow the steps below:
 import hashlib
 
 def produce_hash(model_uri: str) -> str:
-    read_block_size_in_bytes = 64 * 1024 * 1024  # Read file in blocks of 64MiB; or any other amount.
+    read_block_size_in_bytes = 64 * 1024 * 1024  # Read in blocks of 64MiB; any amount will work.
     hasher = hashlib.sha256()
     
     with open(model_uri, "rb") as f_in:
