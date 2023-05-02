@@ -54,7 +54,7 @@
       ]
     },
     "2_layer_6000_vocab_size_bert_v3": {
-      "sha256": "1d88adef5489dc4841fb8881a6f96d140af0004308d856f6f434f7ca57f7e9b4",
+      "sha256": "711ee1897db786bac8ec15f33b17d3e3c37d1df1fffeb61e5ed17695ece0b432",
       "file_extension": ".zip",
       "urls": [
         "https://drive.google.com/uc?id=1ttyrrmVjTTwWqP2kOKwPHIQECBsW1JWu&export=download&confirm=t",
@@ -62,7 +62,7 @@
       ]
     },
     "4_layer_6000_vocab_size_bert_v3": {
-      "sha256": "ec2941741d667f5de73eee1d1aa4b73b91b591c41067af5c6e20edb7b9ee0ceb",
+      "sha256": "5e41067b331bed085320b59cbe448e33725dbf325f4c96f6dc7631fb45424eff",
       "file_extension": ".zip",
       "urls": [
         "https://drive.google.com/uc?id=1pmDucXrEnZJqAJhiOhyg0wH3c3KDm0Bm&export=download&confirm=t",
@@ -70,7 +70,7 @@
       ]
     },
     "256_hidden_dim_6000_vocab_size_1_layer_lstm_v3": {
-      "sha256": "d4b2ecae77096024c2065b249513246050cbdc07b732f60c6bef2489ab080f1c",
+      "sha256": "1155bff5475350fdc4262c990814098230c32c9556d6a12386f40117803d1385",
       "file_extension": ".pt",
       "urls": [
         "https://drive.google.com/uc?id=13vs8TC7h52gA0HUQhvB970mqjL7X5NbV&export=download&confirm=t",
