@@ -267,10 +267,10 @@ def download_resource(
         resource_map: t.Dict[str, ResourceConfigType] = DEFAULT_URIS[task_name]
 
     except KeyError as k_err:
-        valid_tasks = ", ".join(sorted(DEFAULT_URIS.keys()))
+        valid_tasks = ", ".join(map("'{}'".format, sorted(DEFAULT_URIS.keys())))
 
         raise ValueError(
-            f"Unsupported task '{task_name}'. Plase provide one of the following: "
+            f"Unknown task '{task_name}'. Please provide one of the following: "
             f"{valid_tasks}."
         ) from k_err
 
@@ -278,12 +278,12 @@ def download_resource(
         resource_config: ResourceConfigType = resource_map[resource_name]
 
     except KeyError as k_err:
-        valid_resources = ", ".join(sorted(resource_map.keys()))
+        valid_resources = ", ".join(map("'{}'".format, sorted(resource_map.keys())))
 
         raise ValueError(
-            f"Unknown resource '{resource_name}' for task '{task_name}'. Please verify is the "
-            "provided task is correct and, if so, provide one of the following resources: "
-            f"{valid_resources}."
+            f"Unknown resource '{resource_name}' for task '{task_name}'. Please verify if the "
+            f"provided task is correct ('{task_name}'). If that is the case, plase provide one of "
+            f"the following resources: {valid_resources}."
         ) from k_err
 
     output_dir = output_dir.strip()
