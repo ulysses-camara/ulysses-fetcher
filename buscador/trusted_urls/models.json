@@ -87,12 +87,36 @@
         "https://cloud.andrelab.icmc.usp.br/s/ZEDegCCM98SkTto/download/distil_sbert_br_ctimproved_12_epochs_v1.zip"
       ]
     },
-    "ulysses_LaBSE_30000" : {
+    "ulysses_LaBSE_30000": {
       "sha256": "c8ed4b52b3d4b19c2dbeac488db71c90821f946454fd04f8f6cbf3c7c635f9f0",
       "file_extension": ".zip",
       "urls": [
         "https://drive.google.com/uc?id=1Ot5LXEV3pYype5hZBLB11M1OgL8JWV5k&export=download&confirm=t",
         "https://cloud.andrelab.icmc.usp.br/s/gwT8nDCjD74TEzA/download/ulysses_LaBSE_30000.zip"
+      ]
+    },
+    "sbert_1mil_anama": {
+      "sha256": "249c21824630641b597dc9c848e6e272cd418c44dd6672f2374e14a85a57f2c1",
+      "file_extension": ".zip",
+      "urls": [
+        "https://drive.google.com/uc?id=1Wa2jhLqz3xyIFaHI34zybbw3Wcbs4hit&export=download&confirm=t",
+        "https://cloud.andrelab.icmc.usp.br/s/fBmQxPWZKsE3PdH/download/sbert_1mil_anama.zip"
+      ]
+    },
+    "sbert_650k_nheeng": {
+      "sha256": "ec289b599285a73c5901818d678e8902dd7906dd4be286cb672c52146f286f23",
+      "file_extension": ".zip",
+      "urls": [
+        "https://drive.google.com/uc?id=1eYzNra4hVp7B3zfDbRSMDJvliA_Gt5vx&export=download&confirm=t",
+        "https://cloud.andrelab.icmc.usp.br/s/6HCKS3AnoxfzJ8y/download/sbert_650k_nheeng.zip"
+      ]
+    },
+    "sbert_map2doc_v1": {
+      "sha256": "10453ff6f31aa8cf8d1cbd0821cef2ee6852b6da1059a100a2967568be16331c",
+      "file_extension": ".zip",
+      "urls": [
+        "https://drive.google.com/uc?id=125LdP48ZMO6jdRTJ6laohePBFlhHSjRM&export=download&confirm=t",
+        "https://cloud.andrelab.icmc.usp.br/s/Rqiyna7g8E84X9i/download/sbert_map2doc_v1.zip"
       ]
     }
   }
