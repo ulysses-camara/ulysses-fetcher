@@ -161,3 +161,4 @@ venvs/
 
 Makefile
 tests/downloaded_models_from_tests/
+temp/
