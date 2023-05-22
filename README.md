@@ -11,7 +11,7 @@ Fetch resources for Ulysses project.
     1. [Pretrained machine learning models](#pretrained-machine-learning-models)
     2. [Datasets](#datasets)
     3. [Deprecated resources](#deprecated-resources)
-3. [Usage as package](#usage-as-package)
+3. [Usage (as a library)](#usage-as-a-library)
 4. [Usage by command line](#usage-by-command-line)
 5. [For developers](#for-developers)
     1. [Register a new resource](#register-a-new-resource)
@@ -32,7 +32,7 @@ python -m pip install "git+https://github.com/ulysses-camara/ulysses-fetcher"
 | Task name | Model name |
 | --------- | ---------- |
 | `legal_text_segmentation` | - `2_layer_6000_vocab_size_bert_v3` <br> - `4_layer_6000_vocab_size_bert_v3` <br> - `256_hidden_dim_6000_vocab_size_1_layer_lstm_v3`<br> - `6000_subword_tokenizer`|
-| `sentence_similarity`     | - `distil_sbert_br_ctimproved_12_epochs_v1` <br> - `ulysses_LaBSE_3000` |
+| `sentence_similarity`     | - `sbert_1mil_anama` <br> - `sbert_650k_nheeng` <br> - `sbert_map2doc_v1` <br> - `ulysses_LaBSE_3000` |
 
 ### Datasets
 
@@ -46,10 +46,11 @@ python -m pip install "git+https://github.com/ulysses-camara/ulysses-fetcher"
 | Task name | Model name |
 | --------- | ---------- |
 | `legal_text_segmentation` | - ~~`2_layer_6000_vocab_size_bert_v2`~~ (DEPRECATED) <br> - ~~`4_layer_6000_vocab_size_bert_v2`~~ (DEPRECATED) <br> - ~~`256_hidden_dim_6000_vocab_size_1_layer_lstm_v2`~~ (DEPRECATED) <br> - ~~`2_layer_6000_vocab_size_bert`~~ (DEPRECATED) <br> - ~~`512_hidden_dim_6000_vocab_size_1_layer_lstm`~~ (DEPRECATED) |
+| `sentence_similarity` | - ~~`distil_sbert_br_ctimproved_12_epochs_v1`~~ (DEPRECATED) |
 
 ---
 
-## Usage as package
+## Usage (as a library)
 
 ```python
 import buscador
@@ -82,7 +83,7 @@ print("Download was successfull!" if has_succeed else "Download was not successf
 ---
 
 ## Usage by command line
-This package can be used directly from command line as module after installation:
+This library can be used directly from command line as module after installation:
 ```bash
 python -m buscador --help
 ```
@@ -139,7 +140,7 @@ print(my_resource_sha256)
   }
 }
 ```
-6. Create a Pull Request with your changes, providing all information about your resource. Your contribution will be reviewed and, if appropriate to this package, it may get accepted.
+6. Create a Pull Request with your changes, providing all information about your resource. Your contribution will be reviewed and, if appropriate to this library, it may get accepted.
 
 ---
 
