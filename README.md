@@ -72,16 +72,14 @@ has_succeed = buscador.download_resource(
 print("Download was successfull!" if has_succeed else "Download was not successfull.")
 ```
 
-- **task_name** (*str*): Model task name. You can get a list of currently supported tasks programatically by using `buscador.get_available_tasks()`. The list of supported tasks are:
-  - **legal_text_segmentation**: Segmentation of Brazilian Legal texts.
-  - **sentence_similarity**: Sentence resources for legal domain, trained for similarity tasks.
-- **resource_name** (*str*): Model to download. You can get a list of available resources per task by using `buscador.get_task_available_resources(task_name)`.
-- **output_dir** (*str*): Output directory to save downloaded resources.
-- **show_progress_bar** (*bool, default=True*): If True, display progress bar.
-- **check_cached** (*bool, default=True*): If True, do not download resources if a file with the same output URI is found.
-- **clean_compressed_files** (*bool, default=True*): If True, remove compressed files after decompression.
-- **check_resource_hash** (*bool, default=True*): If True, verify if downloaded file hash matches the expected hash value.
-- **timeout_limit_seconds** (*int, default=10*): Number of seconds until abortion of staled downloads.
+- **task_name** (*str*): Resource task name. You can get a list of currently supported tasks programatically by using `buscador.get_available_tasks()`;
+- **resource_name** (*str*): Resource to download. You can get a list of available resources per task by using `buscador.get_task_available_resources(task_name)`;
+- **output_dir** (*str*): Output directory to save downloaded resources;
+- **show_progress_bar** (*bool, default=True*): If True, display progress bar;
+- **check_cached** (*bool, default=True*): If True, do not download resources if a file with the same output URI is found;
+- **clean_compressed_files** (*bool, default=True*): If True, remove compressed files after decompression;
+- **check_resource_hash** (*bool, default=True*): If True, verify if downloaded file hash matches the expected hash value;
+- **timeout_limit_seconds** (*int, default=10*): Limit in seconds until the abortion of staled downloads.
 
 ---
 
@@ -111,8 +109,8 @@ python -m buscador --help
 To register a new resource in Ulysses Fetcher, please follow the steps below:
 1. Make sure that the resource filename (or directory name, in case your resource is represented by more than one file) matches **exactly** the desired resource name.
 2. Compress your resource as either `.zip` or `.tar` format (if it is a PyTorch binary, `.pt`, you can skip this step).
-3. Store your resource in a couple of cloud storage services, and get their directly download URL. It is recommended to store your resource in at least two distinct cloud providers.
-4. Hash you resource by using SHA256 from Python hashlib, as follows:
+3. Store your resource in a couple of cloud storage services, and get their download URL. It is recommended to store your resource in at least two distinct cloud providers.
+4. Hash your resource by using SHA256 from Python hashlib, as follows:
 ```python
 import hashlib
 
