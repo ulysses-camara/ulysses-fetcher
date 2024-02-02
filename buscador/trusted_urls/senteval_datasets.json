@@ -1,0 +1,148 @@
+{
+ "sentence_model_evaluation": {
+  "bill_summary_to_topics": {
+   "sha256": "4f1be3488f3b16d38ea4e9812551a48ed6979c83a0b238891e5d4ade1977614f",
+   "file_extension": ".zip",
+   "urls": [
+    "https://cloud.andrelab.icmc.usp.br/s/PSLj7GcEK3DAsSi/download/bill_summary_to_topics.zip",
+    "https://drive.google.com/uc?id=1oR0Hu2ho7RSQIhmxjAIPxLu5gYVKdls5&export=download&confirm=t"
+   ]
+  },
+  "code_estatutes_cf88": {
+   "sha256": "17715a3ae0d955506c1381cb818f6fdb8321571eea0a5d161c48b55b7433f705",
+   "file_extension": ".zip",
+   "urls": [
+    "https://cloud.andrelab.icmc.usp.br/s/pspJcSCPZ2sm8c4/download/code_estatutes_cf88.zip",
+    "https://drive.google.com/uc?id=19roed_DOO5-TLS4GTlZwRg01RafC3ij7&export=download&confirm=t"
+   ]
+  },
+  "factnews_news_bias": {
+   "sha256": "bc58e0350b9beafd19013e75896bc41d0fa11a219bb85c7ab44c46869b3f0e59",
+   "file_extension": ".zip",
+   "urls": [
+    "https://cloud.andrelab.icmc.usp.br/s/TYXbrTAmgB8JaQ3/download/factnews_news_bias.zip",
+    "https://drive.google.com/uc?id=11MHRbT6BWLLd7JBKtM280cG-yBEmWgWM&export=download&confirm=t"
+   ]
+  },
+  "factnews_news_factuality": {
+   "sha256": "008c34a91978b6aba12e4dd8a09190cbc4471419d7a78614a3196301b4d52ecc",
+   "file_extension": ".zip",
+   "urls": [
+    "https://cloud.andrelab.icmc.usp.br/s/jj4YfcQ3LiJyQPC/download/factnews_news_factuality.zip",
+    "https://drive.google.com/uc?id=1bckK-Alk2ZEYvbgiF4rRMZn3SWYmNZe6&export=download&confirm=t"
+   ]
+  },
+  "fakebr_size_normalized": {
+   "sha256": "06122cf1a7bcc5912cc4639ba763e7e14458d8c66d6a7691ba36eae04e7ef4c6",
+   "file_extension": ".zip",
+   "urls": [
+    "https://cloud.andrelab.icmc.usp.br/s/n5CiRM5g3xscsrz/download/fakebr_size_normalized.zip",
+    "https://drive.google.com/uc?id=1U-MdiK29ZeiKdDucLd3-tJ98HUisFpWq&export=download&confirm=t"
+   ]
+  },
+  "faqs": {
+   "sha256": "ddafa550b9b95352b8fffac859cb8ccfefd8b844937c7b43abcc2ddf5724ff48",
+   "file_extension": ".zip",
+   "urls": [
+    "https://cloud.andrelab.icmc.usp.br/s/tKjWk7AW2EgHrZK/download/faqs.zip",
+    "https://drive.google.com/uc?id=19U8o70I_BpKTLLeDTeA65wb05NOTUiKG&export=download&confirm=t"
+   ]
+  },
+  "hatebr_offensive_lang": {
+   "sha256": "2b363341aee58684df39d77b665d98d69c07bdc1bf911f102463e8ffafac32b8",
+   "file_extension": ".zip",
+   "urls": [
+    "https://cloud.andrelab.icmc.usp.br/s/eCeMkBtWryerf7D/download/hatebr_offensive_lang.zip",
+    "https://drive.google.com/uc?id=1SO--b53lH0SPQGBMWZOmfk8R5WUFR3dt&export=download&confirm=t"
+   ]
+  },
+  "masked_law_name_in_news": {
+   "sha256": "273a06cb358dd11037cda77b3d65b8df787bd03235ff3e801926f325d2885a7d",
+   "file_extension": ".zip",
+   "urls": [
+    "https://cloud.andrelab.icmc.usp.br/s/K5BwmBRzCjNGacR/download/masked_law_name_in_news.zip",
+    "https://drive.google.com/uc?id=1Kw0ENYV53YjZS1ZNlWXXplPoWCBOtN-q&export=download&confirm=t"
+   ]
+  },
+  "masked_law_name_in_summaries": {
+   "sha256": "5104cb70bbd5cf3cc4102435aaaacecafe0f5ee490816d624c7935d71f431b75",
+   "file_extension": ".zip",
+   "urls": [
+    "https://cloud.andrelab.icmc.usp.br/s/G9Tgkxp3YggB8Sa/download/masked_law_name_in_summaries.zip",
+    "https://drive.google.com/uc?id=1hNpiHr98XAe1Co_LRjEevvNt_I4yyShh&export=download&confirm=t"
+   ]
+  },
+  "oab_first_part": {
+   "sha256": "8fdeb1df25464d357130d7c0e8aa396ba3fa7223022f60b87d8c0396762c46b6",
+   "file_extension": ".zip",
+   "urls": [
+    "https://cloud.andrelab.icmc.usp.br/s/QGenFyxJTHtzYxq/download/oab_first_part.zip",
+    "https://drive.google.com/uc?id=1KLlD47XDYfdkGx_BmUIkZ2qp3pPBjm0e&export=download&confirm=t"
+   ]
+  },
+  "oab_second_part": {
+   "sha256": "69312e9cb7039088c252c0ca330682c4f18cab6719909eb8d5aed6a8f444a06a",
+   "file_extension": ".zip",
+   "urls": [
+    "https://cloud.andrelab.icmc.usp.br/s/zFdiFngZkWAS5Az/download/oab_second_part.zip",
+    "https://drive.google.com/uc?id=10rmaWNqFD0Z4JhSOCnSoqZn82eAG78al&export=download&confirm=t"
+   ]
+  },
+  "offcombr2": {
+   "sha256": "99b6600832573ca4a39052c60db5e8f65d6a09a15fcaf7ec62e2604e041bd77d",
+   "file_extension": ".zip",
+   "urls": [
+    "https://cloud.andrelab.icmc.usp.br/s/5ftKfJB8HNLzJ62/download/offcombr2.zip",
+    "https://drive.google.com/uc?id=1y9pQ3v4TeS4gJGYzj6OBOzfsnOL3FNcs&export=download&confirm=t"
+   ]
+  },
+  "stj_summary": {
+   "sha256": "53fa456897778c23200ff7292cec41ed2a15e8eb615100684f4960e55c498fad",
+   "file_extension": ".zip",
+   "urls": [
+    "https://cloud.andrelab.icmc.usp.br/s/W8fFPLDQX3dWfNx/download/stj_summary.zip",
+    "https://drive.google.com/uc?id=1naG5WH-oDMTHYLpkWyMipXc4UszgmoQt&export=download&confirm=t"
+   ]
+  },
+  "sts_state_news": {
+   "sha256": "a09b88be6a33198134f42ca4a9e83b238a4c17a0ea6e154b0db3129295e1d43d",
+   "file_extension": ".zip",
+   "urls": [
+    "https://cloud.andrelab.icmc.usp.br/s/sWycQdZ7zSiYKPs/download/sts_state_news.zip",
+    "https://drive.google.com/uc?id=1pIqmYTULy9xU5j-Z_haoP1xv1C4XjRk1&export=download&confirm=t"
+   ]
+  },
+  "summary_vs_bill": {
+   "sha256": "6882daa1d7d98583e5ffceb0266d742b3372a299053e4fd98fe3b690a1c16a50",
+   "file_extension": ".zip",
+   "urls": [
+    "https://cloud.andrelab.icmc.usp.br/s/6HCNm4jm3kq5myg/download/summary_vs_bill.zip",
+    "https://drive.google.com/uc?id=14LUqlHCJ44bAk0Bf4QGVFD4Z30RsutNA&export=download&confirm=t"
+   ]
+  },
+  "tampered_leg": {
+   "sha256": "81a8d7d13d7dcefce6285ab3ba0501a373d83f5ec5a0766cf87da76dcaad9495",
+   "file_extension": ".zip",
+   "urls": [
+    "https://cloud.andrelab.icmc.usp.br/s/QYzXXGsYmgK99bk/download/tampered_leg.zip",
+    "https://drive.google.com/uc?id=1K4IhzUOxFsahu7ToMYf0THlmg6Df5a32&export=download&confirm=t"
+   ]
+  },
+  "trf_examinations": {
+   "sha256": "9e4cf745de079503db9346eb8d0588787fc52bddf1464e2472a4a06b814fe80c",
+   "file_extension": ".zip",
+   "urls": [
+    "https://cloud.andrelab.icmc.usp.br/s/okajgwS3itWgEH5/download/trf_examinations.zip",
+    "https://drive.google.com/uc?id=1wgoS7sstEX20LjuGCr_0oWTHPHtFv6M5&export=download&confirm=t"
+   ]
+  },
+  "ulysses_sd": {
+   "sha256": "8bc323cad6a18d92789aff01088cbdd098755df28003abddc89394ffa824b656",
+   "file_extension": ".zip",
+   "urls": [
+    "https://cloud.andrelab.icmc.usp.br/s/8zJEzxQXxXPFSQZ/download/ulysses_sd.zip",
+    "https://drive.google.com/uc?id=1f54QNrl1m19pDLGQVnbNUyPf4fTmNGyW&export=download&confirm=t"
+   ]
+  }
+ }
+}
