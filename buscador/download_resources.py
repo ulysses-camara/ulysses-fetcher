@@ -79,7 +79,7 @@ def download_file(
     Parameters
     ----------
     url : str
-        URL to donwload file from.
+        URL to download file from.
 
     output_uri : str
         Output URI (full path, ending with the filename and its extension) to save file.
@@ -157,7 +157,7 @@ def download_resource_from_url(
     Parameters
     ----------
     resource_url : str
-        URL to donwload resource from.
+        URL to download resource from.
 
     output_uri : str
         Output URI (full path, ending with the filename and its extension) to save resource.
