@@ -48,10 +48,19 @@ def test_trusted_urls_integrity():
         ("tampered_leg", "sentence_model_evaluation"),
         ("trf_examinations", "sentence_model_evaluation"),
         ("ulysses_sd", "sentence_model_evaluation"),
-        ("2_layer_6000_vocab_size_bert", "legal_text_segmentation"),
-        ("512_hidden_dim_6000_vocab_size_1_layer_lstm", "legal_text_segmentation"),
+
+        ("4_layer_6000_vocab_size_bert_v3", "legal_text_segmentation"),
+        ("2_layer_6000_vocab_size_bert_v3", "legal_text_segmentation"),
+        ("256_hidden_dim_6000_vocab_size_1_layer_lstm_v3", "legal_text_segmentation"),
         ("6000_subword_tokenizer", "legal_text_segmentation"),
-        ("distil_sbert_br_ctimproved_12_epochs_v1", "sentence_similarity"),
+
+        ("ulysses_LaBSE_30000", "sentence_similarity"),
+        ("sbert_1mil_anama", "sentence_similarity"),
+        ("sbert_650k_nheeng", "sentence_similarity"),
+        ("sbert_map2doc_v1", "sentence_similarity"),
+        ("legal_sroberta_v0", "sentence_similarity"),
+        ("legal_sroberta_v1", "sentence_similarity"),
+
         ("dataset_wikipedia_ptbr_bigram_shift_v1", "probing_task"),
         ("dataset_wikipedia_ptbr_coordination_inversion_v1", "probing_task"),
         ("dataset_wikipedia_ptbr_obj_number_v1", "probing_task"),

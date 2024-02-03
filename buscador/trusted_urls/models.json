@@ -118,6 +118,22 @@
         "https://drive.google.com/uc?id=125LdP48ZMO6jdRTJ6laohePBFlhHSjRM&export=download&confirm=t",
         "https://cloud.andrelab.icmc.usp.br/s/Rqiyna7g8E84X9i/download/sbert_map2doc_v1.zip"
       ]
+    },
+    "legal_sroberta_v0": {
+      "sha256": "3fec683aa763f183a4341f206ce24c02555279d74f151e275bb7286b44830b5a",
+      "file_extension": ".zip",
+      "urls": [
+        "https://cloud.andrelab.icmc.usp.br/s/KY5ppGZXQDzPQDr/download/legal_sroberta_v0.zip",
+        "https://drive.google.com/uc?id=1a-MlhvNRbYtU2nhbLj1AHjj_4vlO46NM&export=download&confirm=t"
+      ]
+    },
+    "legal_sroberta_v1": {
+      "sha256": "c46aee3750209070863eac976ce41ab9265deae8b83e94b8ee987815d4bbba57",
+      "file_extension": ".zip",
+      "urls": [
+        "https://cloud.andrelab.icmc.usp.br/s/PpjtRabLMmQbRsq/download/legal_sroberta_v1.zip",
+        "https://drive.google.com/uc?id=1iHSjqMZnNogbD57oqWF06iNk2o90Fiyr&export=download&confirm=t"
+      ]
     }
   }
 }
