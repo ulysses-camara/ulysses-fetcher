@@ -107,10 +107,19 @@ python -m buscador --help
 
 ### Register a new resource
 To register a new resource in Ulysses Fetcher, please follow the steps below:
+
 1. Make sure that the resource filename (or directory name, in case your resource is represented by more than one file) matches **exactly** the desired resource name.
-2. Compress your resource as either `.zip` or `.tar` format (if it is a PyTorch binary, `.pt`, you can skip this step).
+
+2. Compress your resource as either `.zip` or `.tar` format (if it is a PyTorch binary - `.pt` - you can skip this step).
+
+```bash
+zip -r my_resource_file_or_directory.zip my_resource_file_or_directory/
+```
+
 3. Store your resource in a couple of cloud storage services, and get their download URL. It is recommended to store your resource in at least two distinct cloud providers.
+
 4. Hash your resource by using SHA256 from Python hashlib, as follows:
+
 ```python
 import hashlib
 
@@ -127,20 +136,25 @@ def produce_hash(model_uri: str) -> str:
 my_resource_sha256 = produce_hash("path/to/my_resource.zip")
 print(my_resource_sha256)
 ```
+
 5. Register your resource in a `JSON` file within the [trusted_urls directory](./buscador/trusted_urls/), providing the resource task, resource name, file extension (`.zip` or `.tar` for compressed resources), SHA256, and the direct download URLs as depicted in the exemple below (use [buscador/trusted_urls/models.json](./buscador/trusted_urls/models.json) as an exemple). You can either create a new `JSON` file or register your resource in an existing file, as long as you keep your resource semantically coherent with the configuration filename. Also note that Ulysses Fetcher will try to download resources by following the provided order in `urls`. Hence, later URLs are fallback addresses in case something went wrong with every previous URL.
+
 ```json
 {
-  "resource_task": {
-    "sha256": "<my_resource_sha256>",
-    "file_extension": ".zip",
-    "urls": [
-      "https://url_1",
-      "https://url_2",
-      "..."
-    ]
+  "task_name": {
+    "resource_name": {
+      "sha256": "<my_resource_sha256>",
+      "file_extension": ".zip",
+      "urls": [
+        "https://url_1",
+        "https://url_2",
+        "..."
+      ]
+    }
   }
 }
 ```
+
 6. Create a Pull Request with your changes, providing all information about your resource. Your contribution will be reviewed and, if appropriate to this library, it may get accepted.
 
 ---
