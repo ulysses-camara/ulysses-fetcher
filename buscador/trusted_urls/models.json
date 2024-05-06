@@ -79,7 +79,7 @@
     }
   },
   "sentence_similarity": {
-    "distil_sbert_br_ctimproved_12_epochs_v1" : {
+    "distil_sbert_br_ctimproved_12_epochs_v1": {
       "sha256": "69df49d4c78da0161186e5761a762ef9632561ebf33aa41422c5d2db07d04ae5",
       "file_extension": ".zip",
       "urls": [
@@ -133,6 +133,16 @@
       "urls": [
         "https://cloud.andrelab.icmc.usp.br/s/PpjtRabLMmQbRsq/download/legal_sroberta_v1.zip",
         "https://drive.google.com/uc?id=1iHSjqMZnNogbD57oqWF06iNk2o90Fiyr&export=download&confirm=t"
+      ]
+    }
+  },
+  "stance_detection": {
+    "political_brsd_v0": {
+      "sha256": "4c1e35bb32d0657b5a77d365f42c8ca794d459f6689529ef54826058657f57ca",
+      "file_extension": ".zip",
+      "urls": [
+        "https://cloud.andrelab.icmc.usp.br/s/e9dFySWPZRLTbLN/download/political_brsd.zip",
+        "https://drive.google.com/uc?id=1ptbQsbg6s4rziMh0UjpxkjebQVdUR8yU&export=download&confirm=t"
       ]
     }
   }

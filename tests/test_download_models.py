@@ -111,6 +111,7 @@ def test_trusted_urls_integrity():
         ("dataset_leg_docs_ptbr_top_constituents_v1", "probing_task"),
         ("dataset_leg_docs_ptbr_tree_depth_v1", "probing_task"),
         ("dataset_leg_docs_ptbr_word_content_v1", "probing_task"),
+        ("political_brsd_v0", "stance_detection"),
     ],
 )
 def test_download_resources(resource_name: str, task_name: str):
