@@ -1,5 +1,3 @@
-[![Tests](https://github.com/ulysses-camara/ulysses-fetcher/actions/workflows/tests.yml/badge.svg)](https://github.com/ulysses-camara/ulysses-fetcher/actions/workflows/tests.yml)
-
 # Ulysses Fetcher
 Fetch resources for Ulysses project.
 
@@ -33,10 +31,9 @@ python -m pip install "git+https://github.com/ulysses-camara/ulysses-fetcher"
 | --------- | ---------- |
 | `legal_text_segmentation` | - `2_layer_6000_vocab_size_bert_v3` <br> - `4_layer_6000_vocab_size_bert_v3` <br> - `256_hidden_dim_6000_vocab_size_1_layer_lstm_v3`<br> - `6000_subword_tokenizer`|
 | `sentence_similarity`     | - `legal_sroberta_v0` <br> - `legal_sroberta_v1` <br> - `sbert_1mil_anama` <br> - `sbert_650k_nheeng` <br> - `sbert_map2doc_v1` <br> - `ulysses_LaBSE_3000` |
+| `stance_detection` | - `political_brsd_v0` |
 
 ### Datasets
-
-
 
 | Task name | Dataset name |
 | --------- | ---------- |
