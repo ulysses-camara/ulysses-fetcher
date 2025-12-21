@@ -163,3 +163,5 @@ Makefile
 tests/downloaded_models_from_tests/
 temp/
 tests/downloaded_resources_from_tests/
+**/*.zip
+ulysses_resources/

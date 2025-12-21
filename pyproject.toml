@@ -4,7 +4,7 @@ requires = ["flit_core >=3.2,<4"]
 
 [project]
 name = "buscador"
-version = "1.2.9"
+version = "2.0.0"
 description = "Buscador de conjuntos de dados e modelos pré-treinados para o projeto Ulysses."
 authors = [
 	{name="felsiq", email= "felipe.siqueira@usp.br"}
@@ -13,7 +13,7 @@ authors = [
 requires-python = ">=3.7"
 
 dependencies = [
-	"tqdm >= 4.64.0",
+	"gdown>=5.2,<6",
 ]
 
 [project.optional-dependencies]
